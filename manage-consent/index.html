@@ -1,0 +1,2928 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang=""> <!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>SBI Card</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <script type="text/javascript"> var lang = "en";</script>
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="shortcut icon" href="/creditcards/favicon.png">
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic"
+        rel="stylesheet" type="text/css">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/Dogfalo/materialize@master/extras/noUiSlider/nouislider.css">
+    <link rel="stylesheet" type="text/css" href="../css/styles.css?rel=b60e77b9f8">
+    <link rel="stylesheet" type="text/css" href="../css/component.css">
+    <link rel="stylesheet" type="text/css" href="../css/insta-card.css">
+    <link rel="stylesheet" type="text/css" href="../css/scroll.css">
+    <link rel="stylesheet" type="text/css" href="../css/sbi-min.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+
+    <script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+
+</head>
+
+<body onunload="" class="overlay-opened">
+    <!--[if lt IE 9]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <input type="hidden" class="b2b_omniture_role" value="USER">
+    <div class="wrapper">
+        <a href="#top" class="back-to-top hide"><span></span></a>
+        <header class="main-header">
+            <input type="hidden" value="" id="alertsctxPath">
+            <div class="ribbon clearfix">
+                <p class="today"><span class="icon date"></span>04 Sep 2020</p>
+                <section class="quickLink-wrapper">
+                    <a href="javascript:void(0);" class="nav-trigger" id="quickLink-nav">
+                        Quick Links
+                    </a>
+                    <!-- Display all the item from database start-->
+                    <ul id="ddList" class="contentHide">
+                        <li>
+                            <a id="profile-link-quick-link" onclick="setAnalyticsPost('My Profile');
+                submitForm('/creditcards/app/myprofile/contact-details-page', true);" href="javascript:void(0);">
+                                My Profile
+                            </a>
+                        </li>
+
+
+                        <li><a href="javascript:void(0);" onclick="submitForm('/creditcards/app/billdesk/utility-billpay', true);
+                                    setAnalyticsPost('Utility Bill Payment');">Utility Bill Payment</a></li>
+
+
+
+                        <li><a href="javascript:void(0);" onclick="submitForm('/creditcards/app/requests/opt-for-estatement-page', true);
+                                    setAnalyticsPost('Opt for e-statement');">Opt for e-statement</a></li>
+
+
+
+                        <li><a href="javascript:void(0);" onclick="submitForm('/creditcards/app/requests/report-stolen-page/0', true);
+                                    setAnalyticsPost('Report a Lost/Stolen Card');">Report a Lost/Stolen Card</a></li>
+
+
+                    </ul>
+
+                    <!-- Display all the item from database end-->
+                </section>
+            </div>
+            <nav class="top-nav position-relative">
+                <a href="javascript:void(0);" onclick="submitForm('/creditcards/app/dashboard', true);" class="logo">SBI
+                    Card</a>
+                <div class="mobile-user-info mobile-only">
+                    <!-- <a href="#" class="user-menu"> -->
+                    <a href="javascript:void(0);" class="user-menu">
+
+                        <span class="greet">Welcome</span>
+                        <div class="elips">FVESTAAOT SIT2</div>
+                        <span class="icon arrow-down"></span>
+                    </a>
+
+                    <div class="userDetail">
+                        <div>Last Login: 02 Sep 2020, 07.11 PM</div>
+                        <div>Email: <span id="email-address">SIXXXXXX@EMAIL.COM</span></div>
+                        <div>Mobile: <span id="mobile-number">XXXXXX2300</span></div>
+                        <p class="contactLnk"><a href="javascript:void(0);"
+                                onclick="submitForm('/creditcards/app/myprofile/contact-details-page', true);"
+                                class="secondary">Update</a></p>
+                    </div>
+                </div>
+                <ul class="menu retail-menu-list">
+                    <li><a href="javascript:void(0);"></a></li>
+                    <li class="alert-list-menu" style="visibility: visible; pointer-events: auto;"><a
+                            href="javascript:void(0);"><span class="alert-unreadcount"
+                                style="background: rgb(250, 16, 23);">1</span>My Alert</a><span
+                            class="icon arrwImg"></span></li>
+
+                    <li><a onclick="setAnalyticsPost('Contact Us');" href="/creditcards/app/dashboard/contact-us"
+                            target="_blank">Contact Us</a></li>
+
+                    <li>
+
+                        <!--code for logout button-->
+
+                        <div class="modal-overlay csat-modal-container" id="logout-content">
+                            <section class="modal csat-modal-content" id="csat-feedback-popup"
+                                style="margin-top: -267.5px;">
+                                <div class="modal-wrap">
+                                    <span id="csat-image" onclick="showFullbody();
+                                                closeModalPopup($(this));
+                                                sessionStorage.clear();
+                                                logoutForm.submit();
+                                                setAnalyticsPost('Log out');">X</span>
+                                    <h2 class="modal-title">Customer Feedback</h2>
+                                </div>
+                                <section class="content">
+                                    <p>Your opinion matters!</p>
+                                    <p>Take a few minutes to fill out our survey to help us enhance your experience</p>
+                                </section>
+                                <div class="feed-buttons">
+                                    <div class="take-feedback-content">
+                                        <button id="start-button-content" class="custom-start-button">Start</button>
+                                    </div>
+                                    <div class="later-link">
+                                        <a href="javascript:void(0);" data-dismiss="modal" id="Maybe-button-content"
+                                            onclick="closeModalPopup($(this));
+                                                    setAnalyticsPost('Log out');">Maybe Later</a>
+                                    </div>
+                                </div>
+
+                            </section>
+                        </div>
+
+                        <!--Modal for feedback-->
+                        <div class="modal-overlay csat-modal-container" id="open-modal-content">
+                            <section class="modal csat-modal-content" style="margin-top: -267.5px;">
+                                <div class="modal-wrap">
+                                    <div class="modal-heading">
+                                        <span class="logout-popup-x-csat" id="csat-image" onclick="closeModalPopup($(this));
+                                                    setAnalyticsPost('Log out');
+                                                  ">X</span>
+                                        <h2 class="modal-title">Customer Feedback</h2>
+                                    </div>
+                                    <div id="feedback-star-content" class="feed-back-star-wrap">
+                                        <div class="question-wrap">
+                                            <div class="csat-star-content">
+                                                <div id="first-question" class="question-eading">
+
+                                                </div>
+
+
+
+                                                <div>
+                                                    <div class="rating-stars text-center">
+                                                        <ul id="stars">
+                                                            <li class="star" title="Poor" data-value="1">
+                                                                <i class="fa fa-star fa-fw"></i>
+                                                            </li>
+                                                            <li class="star" title="Bad" data-value="2">
+                                                                <i class="fa fa-star fa-fw"></i>
+                                                            </li>
+                                                            <li class="star" title="Average" data-value="3">
+                                                                <i class="fa fa-star fa-fw"></i>
+                                                            </li>
+                                                            <li class="star" title="Good" data-value="4">
+                                                                <i class="fa fa-star fa-fw"></i>
+                                                            </li>
+                                                            <li class="star" title="Excellent" data-value="5">
+                                                                <i class="fa fa-star fa-fw"></i>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="expanded-content" class="csat-expanded-content"
+                                                style="display: none;">
+                                                <div class="success-box">
+                                                    <div class="clearfix-csat"></div>
+                                                    <div class="text-message-csat"></div>
+                                                    <div class="clearfix-csat"></div>
+                                                </div>
+                                                <div class="csat-star-content" id="ques1">
+                                                    <div class="question-content last-inter">
+                                                        <p>Sincere apologies for the bad experience. What should we work
+                                                            upon to improve your
+                                                            experience next time?</p>
+                                                        <div class="question-content-buttons">
+                                                            <button type="button">Options available</button>
+                                                            <button type="button">Responsiveness of pages</button>
+                                                            <button type="button">User friendliness</button>
+                                                            <button id="otherButton-csat">Other</button>
+                                                            <div id="other-option-section"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="submit-feedback rat-show">
+                                                    <button id="modal-cancel-button" class="logout-popup-x-csat"
+                                                        onclick="closeModalPopup($(this));
+                                                                setAnalyticsPost('Log out');">Cancel</button>
+                                                    <button id="modal-start-button" class="review-submit"
+                                                        disabled="disabled">Submit</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+
+                        <!--Code for thank you page-->
+                        <div class="modal-overlay csat-modal-container" id="Thank-you-content">
+                            <section class="modal csat-modal-content" id="csat-thankyou-modal"
+                                style="margin-top: -267.5px;">
+
+                                <span id="csat-image" onclick="closeModalPopup($(this));
+                                          ">X</span>
+                                <div class="modal-wrap">
+                                    <figure class="cta-img">
+                                        <img src="/creditcards/resources/img/tick.png" id="tick-image">
+                                    </figure>
+                                    <h2 class="modal-title">Thank you!</h2>
+                                    <p class="thankyou-paragraph">Thank you for the feedback. We will act on the same to
+                                        ensure better<br>
+                                        customer experience going forward.
+                                    </p>
+                                </div>
+                            </section>
+                        </div>
+
+                        <a href="javascript:void(0);" id="logoutButtonId" onclick="">Log out</a>
+                        <form action="/creditcards/j_spring_security_logout" method="POST" name="logoutForm">
+                            <input type="hidden" name="" value="">
+                            <input type="hidden" name="synchronizerToken" value="TIR7v6eBuzNlK3PekSTOvLHjj2uxRcqibhmf">
+                        </form>
+                    </li>
+                </ul>
+
+                <div class="alert-list-container" id="alert-content" style="display: none;">
+                    <div class="alert-list-wrap">
+                        <div id="new-alert-block">
+                            <h3>New</h3>
+                            <div class="alert-container unreadClass" id="alert_1560492140332" iscritical="false"
+                                alertsection="New" repeatcount="1" isreadflag="false" channel="website"
+                                isctasisplay="undefined"
+                                clickattr="'alert_1560492140332','You are eligible for a higher credit limit. Click on "
+                                increase="" now"="" to="" your="" credit="" limit="" immediately.',,,1,true"=""
+                                alert-displaytype="alert" alert-orgid="101"><span
+                                    class="icon creditLimitIncrease"></span> <span class="alertImgContainer"></span>
+                                <span class="alertTxtContainer"><span class="alert-tittle">Increase your Credit
+                                        Limit</span> <span class="alert-desc"
+                                        alert-data-desc="You are eligible for a higher credit limit. Click on "
+                                        increase="" now"="" to="" your="" credit="" limit="" immediately."="">You are
+                                        eligible for a higher credit limit. Click on "Increase Now" to increa...</span>
+                                    <span class="alert-startDate">05 Feb, 2019</span></span>
+                                <div class="alert-cta-block"> <a data-id="alert_1560492140332cta1"
+                                        href="javascript:void(0);"
+                                        class="btn-cta-1 button primary alertButton-clickToProceed"
+                                        alertctatype="ACTION" channelname="website"
+                                        onclick="submitForm('/creditcards/app/benefits/clip-page', true);
+                                        setAnalyticsCTAClick('Increase Now', 'alert_1560492140332', '/creditcards/app/benefits/clip-page');">Increase Now</a> <a
+                                        data-id="alert_1560492140332cta2" href="javascript:void(0);"
+                                        class="button primary alertButton-clickToProceed alerts-later-cta"
+                                        alertctatype="LATER" channelname="website"
+                                        onclick="setAnalyticsCTAClick('Later', 'alert_1560492140332', );">Later</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="earlier-alert-block">
+                            <h3>Earlier</h3>
+                        </div>
+                    </div>
+                    <div id="view-all-alert">
+                        <h4>
+                            <a href="javascript:void(0);" data-href="/creditcards/app/page/request/AnN/"
+                                onclick="submitForm('/creditcards/app/page/request/AnN/', true);">
+                                View All</a>
+                        </h4>
+
+                    </div>
+                </div>
+                <div class="dropdown-block">
+                    <div class="dropdonw-card">
+                        <div class="mb-20">
+                            Last Login: 04 Nov 2022, 10.31 AM
+                        </div>
+                        <div class="d-card-title"><img src="../img/q-contact.svg" alt=""> Quick Contact</div>
+                        <dic class="d-cnt">
+
+                            <div>Email: KEXXXXXXXXX@GMAIL.COM</div>
+                            <div class="d-flex justify-content-between mb-0">
+                                <div>Mobile:</div>
+                                <div>XXXXXX2578</div>
+                                <a href="#">Update</a>
+                            </div>
+                        </dic>
+                    </div>
+                    <div class="dropdonw-card">
+                        <div class="d-card-title"><img src="../img/address.svg" alt=""> Address</div>
+                        <dic class="d-cnt">
+                            <div class="d-flex justify-content-between mb-0">
+                                <div class="fw-semibold">
+                                    Personal Address
+                                </div>
+                                <div>
+                                    <a href="javascript:void(0);" class="vpa">View/Update</a>
+                                </div>
+                            </div>
+                            <div class="gray-text mb-20">(current communication address)</div>
+                            <div class="d-flex justify-content-between mb-0">
+                                <div class="fw-semibold">Official Address</div>
+                                <div>
+                                    <a href="javascript:void(0);" class="voa">View/Update</a>
+                                </div>
+                            </div>
+                        </dic>
+                    </div>
+                </div>
+            </nav>
+
+
+
+
+            <input type="hidden" class="checkAANEligibilty" value="true">
+
+
+            <div class="mobile-menu mobile-only">
+
+
+                <ul class="primary-links">
+                    <li id="dashboard" style="width: 32%;">
+                        <a href="/creditcards/app/rewards/rewards-summary" class="nav-trigger">
+                            <span class="icon dashboard"></span>
+
+                        </a>
+                        <a class="nav-trigger mobile-link-only">
+                            Quick Contact
+                        </a>
+                    </li>
+
+
+                    <li class="alert-list-menu" style="width: 32%; visibility: visible; pointer-events: auto;">
+                        <a href="javascript:void(0);" class="myalert-mobile-link">
+
+                            <em class="alert-unreadcount" style="background: rgb(250, 16, 23);">1</em>
+
+                            <span class="icon notify"></span>
+                            My Alert
+                        </a>
+                    </li>
+                    <li style="width: 32%;">
+                        <a href="javascript:void(0);" class="logout-link">
+                            <span class="icon logout"></span>
+                            Logout
+                        </a>
+                    </li>
+                </ul>
+
+
+
+
+                <nav class="navigation">
+                    <div class="block">
+                        <ul class="side-menu">
+                            <input type="hidden" name="unreadMailCount" value="0">
+
+                            <li class="active">
+
+
+                                <a href="javascript:void(0);" data-href="/creditcards" target="" onclick="submitForm('/creditcards', false);
+                                            setAnalyticsPost('My Accounts')">
+                                    <span class="icon user"></span>
+                                    My Accounts
+
+                                    <span class="arrow"></span>
+                                </a>
+
+
+
+
+                                <ul class="child-node">
+
+
+                                    <li data-val="Card Statements">
+                                        <a href="javascript:void(0);"
+                                            data-href="/creditcards/app/myaccount/card-statements-page" onclick="submitForm('/creditcards/app/myaccount/card-statements-page', true);
+                                                    setAnalyticsPost('Card Statements')">Card Statements</a>
+                                    </li>
+
+
+
+                                    <li data-val="Unbilled Transactions">
+                                        <a href="javascript:void(0);"
+                                            data-href="/creditcards/app/myaccount/unbilled-txn-page" onclick="submitForm('/creditcards/app/myaccount/unbilled-txn-page', true);
+                                                    setAnalyticsPost('Unbilled Transactions')">Unbilled
+                                            Transactions</a>
+                                    </li>
+
+
+
+                                    <li data-val="Transaction History">
+                                        <a href="javascript:void(0);"
+                                            data-href="/creditcards/app/myaccount/transaction-history-page" onclick="submitForm('/creditcards/app/myaccount/transaction-history-page', true);
+                                                    setAnalyticsPost('Transaction History')">Transaction History</a>
+                                    </li>
+
+
+
+                                    <li data-val="Payment History">
+                                        <a href="javascript:void(0);"
+                                            data-href="/creditcards/app/myaccount/payment-history-page" onclick="submitForm('/creditcards/app/myaccount/payment-history-page', true);
+                                                    setAnalyticsPost('Payment History')">Payment History</a>
+                                    </li>
+
+
+
+                                    <li data-val="Add-on Card Details">
+                                        <a href="javascript:void(0);"
+                                            data-href="/creditcards/app/myaccount/addon-card_detail-page/0" onclick="submitForm('/creditcards/app/myaccount/addon-card_detail-page/0', true);
+                                                    setAnalyticsPost('Add-on Card Details')">Add-on Card Details</a>
+                                    </li>
+
+
+
+                                    <li data-val="Spend Analyzer">
+                                        <a href="javascript:void(0);"
+                                            data-href="/creditcards/app/myaccount/spend-analyzer" onclick="submitForm('/creditcards/app/myaccount/spend-analyzer', true);
+                                                    setAnalyticsPost('Spend Analyzer')">Spend Analyzer</a>
+                                    </li>
+
+
+
+                                    <li data-val="Manage PIN">
+                                        <a href="javascript:void(0);"
+                                            data-href="/creditcards/app/myaccount/manage-pin-page" onclick="submitForm('/creditcards/app/myaccount/manage-pin-page', true);
+                                                    setAnalyticsPost('Manage PIN')">Manage PIN</a>
+                                    </li>
+
+
+
+                                    <li class="active">
+                                        <a href="javascript:void(0);"
+                                            data-href="/creditcards/app/requests/know-your-customer" onclick="submitForm('/creditcards/app/requests/know-your-customer', true);
+                                                    setAnalyticsPost('Submit KYC Documents')">KYC Renewal</a>
+                                    </li>
+
+
+                                </ul>
+
+                            </li>
+                            <li>
+
+
+                                <a href="javascript:void(0);" data-href="/creditcards" target="" onclick="submitForm('/creditcards', false);
+                                            setAnalyticsPost('Benefits')">
+                                    <span class="icon thumb"></span>
+                                    Benefits
+
+                                    <span class="arrow"></span>
+                                </a>
+
+
+
+
+                                <ul class="child-node">
+
+
+                                    <li data-val="Balance Transfer on EMI">
+                                        <a href="javascript:void(0);"
+                                            data-href="/creditcards/app/benefits/balance-transfer-emi" onclick="submitForm('/creditcards/app/benefits/balance-transfer-emi', true);
+                                                    setAnalyticsPost('Balance Transfer on EMI')">Balance Transfer on
+                                            EMI</a>
+                                    </li>
+
+
+
+                                    <li data-val="Balance Transfer">
+                                        <a href="javascript:void(0);"
+                                            data-href="/creditcards/app/benefits/balance-transfer" onclick="submitForm('/creditcards/app/benefits/balance-transfer', true);
+                                                    setAnalyticsPost('Balance Transfer')">Balance Transfer</a>
+                                    </li>
+
+
+
+                                    <li data-val="Encash">
+                                        <a href="javascript:void(0);" data-href="/creditcards/app/benefits/encash"
+                                            onclick="submitForm('/creditcards/app/benefits/encash', true);
+                                                    setAnalyticsPost('Encash')">Encash</a>
+                                    </li>
+
+
+
+                                    <li data-val="Easy Money">
+                                        <a href="javascript:void(0);"
+                                            data-href="/creditcards/app/benefits/easy-money-draft" onclick="submitForm('/creditcards/app/benefits/easy-money-draft', true);
+                                                    setAnalyticsPost('Easy Money')">Easy Money</a>
+                                    </li>
+
+
+
+                                    <li data-val="Flexipay">
+                                        <a href="javascript:void(0);" data-href="/creditcards/app/benefits/flexipay"
+                                            onclick="submitForm('/creditcards/app/benefits/flexipay', true);
+                                                    setAnalyticsPost('Flexipay')">Flexipay</a>
+                                    </li>
+
+
+
+                                    <li data-val="Card Upgrade">
+                                        <a href="javascript:void(0);" data-href="/creditcards/app/benefits/flip-page"
+                                            onclick="submitForm('/creditcards/app/benefits/flip-page', true);
+                                                    setAnalyticsPost('Card Upgrade')">Card Upgrade</a>
+                                    </li>
+
+
+
+                                    <li data-val="Credit Limit Increase">
+                                        <a href="javascript:void(0);" data-href="/creditcards/app/benefits/clip-page"
+                                            onclick="submitForm('/creditcards/app/benefits/clip-page', true);
+                                                    setAnalyticsPost('Credit Limit Increase')">Credit Limit
+                                            Increase</a>
+                                    </li>
+
+
+
+                                    <li data-val="Foreclosure">
+                                        <a href="javascript:void(0);" data-href="/creditcards/app/benefits/foreclosure"
+                                            onclick="submitForm('/creditcards/app/benefits/foreclosure', true);
+                                                    setAnalyticsPost('Foreclosure')">Foreclosure</a>
+                                    </li>
+
+
+
+                                    <li data-val="Track Booked Offers">
+                                        <a href="javascript:void(0);"
+                                            data-href="/creditcards/app/benefits/track-booked-offers" onclick="submitForm('/creditcards/app/benefits/track-booked-offers', true);
+                                                    setAnalyticsPost('Track Booked Offers')">Track Booked Offers</a>
+                                    </li>
+
+
+
+
+                                </ul>
+
+                            </li>
+
+
+                            <li>
+
+
+
+                                <a href="javascript:void(0);" data-href="/creditcards/app/billdesk/utility-billpay"
+                                    target="" onclick="submitForm('/creditcards/app/billdesk/utility-billpay', true);
+                                            setAnalyticsPost('Utility Bill Payment')">
+                                    <span class="icon bill"></span>
+                                    Utility Bill Payment
+                                </a>
+
+
+
+                            </li>
+
+                            <li><a href="#"><span class="icon star"></span>Multicarding<span class="arrow"></span></a>
+                            </li>
+
+                            <li><a href="javascript:void(0);" data-href="/creditcards/app/offers/summary" target=""
+                                    onclick="submitForm('/creditcards/app/offers/summary', true);
+                                        setAnalyticsPost('Offers')">
+                                    <span class="icon cards"></span>
+                                    Offers
+                                </a>
+
+                            </li>
+
+                            <li>
+
+                                <a href="javascript:void(0);" data-href="/creditcards" target="" onclick="submitForm('/creditcards', false);
+                                            setAnalyticsPost('Rewards')">
+                                    <span class="icon rewards"></span>
+                                    Rewards
+
+                                    <span class="arrow"></span>
+                                </a>
+
+
+                                <ul class="child-node">
+
+
+                                    <li data-val="Reward Summary">
+                                        <a href="javascript:void(0);"
+                                            data-href="/creditcards/app/rewards/rewards-summary" onclick="submitForm('/creditcards/app/rewards/rewards-summary', true);
+                                                    setAnalyticsPost('Reward Summary')">Reward Summary</a>
+                                    </li>
+
+
+
+                                    <li data-val="Redeem Rewards">
+                                        <a href="javascript:void(0);" data-href="/creditcards/app/rewards/catalog"
+                                            onclick="submitForm('/creditcards/app/rewards/catalog', true);
+                                                    setAnalyticsPost('Redeem Rewards')">Redeem Rewards</a>
+                                    </li>
+
+
+
+                                    <li data-val="Redemption History">
+                                        <a href="javascript:void(0);"
+                                            data-href="/creditcards/app/rewards/redemption-history" onclick="submitForm('/creditcards/app/rewards/redemption-history', true);
+                                                    setAnalyticsPost('Redemption History')">Redemption History</a>
+                                    </li>
+
+
+                                </ul>
+
+                            </li>
+
+
+                            <li> <a href="javascript:void(0);"><span class="icon card-app"></span> Services<span
+                                        class="arrow"></span></a>
+
+                                <ul class="child-node">
+
+                                    <li> <a href="javascript:void(0);">Report a Lost/Stolen Card</a></li>
+                                    <li> <a href="javascript:void(0);">Re-issue/Replace Card</a></li>
+                                    <li> <a href="javascript:void(0);">WhatsApp Connect</a></li>
+                                    <li> <a href="javascript:void(0);">Request for a Duplicate Statement</a></li>
+                                    <li> <a href="javascript:void(0);">Card Activation</a></li>
+                                    <li> <a href="javascript:void(0);">Track Service Request</a></li>
+                                    <li> <a href="javascript:void(0);">Opt for e-statement</a></li>
+                                    <li> <a href="javascript:void(0);">Add-on Card</a></li>
+                                    <li> <a href="javascript:void(0);">International Number Update</a></li>
+                                    <li> <a href="javascript:void(0);">Credit balance refund</a></li>
+                                    <li> <a href="javascript:void(0);">OTP for IVR/Moto</a></li>
+                                    <li> <a href="javascript:void(0);">Dispute Transaction</a></li>
+                                    <li> <a href="javascript:void(0);">Track Dispute</a></li>
+                                    <li> <a href="javascript:void(0);">Manage Tokenized Payments</a></li>
+                                    <li> <a href="javascript:void(0);">Manage Card Usage</a></li>
+
+
+
+                                </ul>
+
+                            </li>
+
+                            <li>
+
+
+                                <a href="javascript:void(0);" data-href="/creditcards" target="" onclick="submitForm('/creditcards', false);
+                                            setAnalyticsPost('Insurance ')">
+                                    <span class="icon insuranceIcon"></span>
+                                    Insurance
+
+                                    <span class="arrow"></span>
+                                </a>
+
+
+
+
+                                <ul class="child-node">
+
+
+                                    <li data-val="Card Protection">
+                                        <a href="javascript:void(0);"
+                                            data-href="/creditcards/app/insurance/products/category/card-protection"
+                                            onclick="submitForm('/creditcards/app/insurance/products/category/card-protection', true);
+                                                    setAnalyticsPost('Card Protection')">Card Protection</a>
+                                    </li>
+
+
+
+                                    <li data-val="Health Insurance">
+                                        <a href="javascript:void(0);"
+                                            data-href="/creditcards/app/insurance/products/category/health-insurance"
+                                            onclick="submitForm('/creditcards/app/insurance/products/category/health-insurance', true);
+                                                    setAnalyticsPost('Health Insurance')">Health Insurance</a>
+                                    </li>
+
+
+
+                                    <li data-val="Additional Health Cover">
+                                        <a href="javascript:void(0);"
+                                            data-href="/creditcards/app/insurance/products/category/additional-health-cover"
+                                            onclick="submitForm('/creditcards/app/insurance/products/category/additional-health-cover', true);
+                                                    setAnalyticsPost('Additional Health Cover')">Additional Health
+                                            Cover</a>
+                                    </li>
+
+
+
+                                    <li data-val="Personal Accident Insurance">
+                                        <a href="javascript:void(0);"
+                                            data-href="/creditcards/app/insurance/products/category/personal-accident-insurance"
+                                            onclick="submitForm('/creditcards/app/insurance/products/category/personal-accident-insurance', true);
+                                                    setAnalyticsPost('Personal Accident Insurance')">Personal Accident
+                                            Insurance</a>
+                                    </li>
+
+
+
+                                    <li data-val="Motor Insurance">
+                                        <a href="javascript:void(0);"
+                                            data-href="/creditcards/app/insurance/products/category/motor-insurance"
+                                            onclick="submitForm('/creditcards/app/insurance/products/category/motor-insurance', true);
+                                                    setAnalyticsPost('Motor Insurance')">Motor Insurance</a>
+                                    </li>
+
+
+
+                                    <li data-val="Life Insurance">
+                                        <a href="javascript:void(0);"
+                                            data-href="/creditcards/app/insurance/products/category/life-insurance"
+                                            onclick="submitForm('/creditcards/app/insurance/products/category/life-insurance', true);
+                                                    setAnalyticsPost('Life Insurance')">Life Insurance</a>
+                                    </li>
+
+
+
+                                    <li data-val="Other Plans">
+                                        <a href="javascript:void(0);"
+                                            data-href="/creditcards/app/insurance/products/category/other-plans"
+                                            onclick="submitForm('/creditcards/app/insurance/products/category/other-plans', true);
+                                                    setAnalyticsPost('Other Plans')">Other Plans</a>
+                                    </li>
+
+
+                                </ul>
+
+                            </li>
+
+                            <li>
+
+
+                                <a href="javascript:void(0);" data-href="/creditcards" target="" onclick="submitForm('/creditcards', false);
+                                            setAnalyticsPost('MailBox')">
+                                    <span class="icon webform"></span>
+                                    MailBox
+
+                                    <span class="arrow"></span>
+                                    <sup class="unReadClass">&nbsp;0</sup></a>
+
+
+
+
+                                <ul class="child-node">
+
+
+                                    <li data-val="Compose">
+                                        <a href="javascript:void(0);"
+                                            data-href="/creditcards/app/webform/webform-interaction" onclick="submitForm('/creditcards/app/webform/webform-interaction', true);
+                                                    setAnalyticsPost('Compose')">Compose</a>
+                                    </li>
+
+
+
+                                    <li data-val="My Interactions">
+                                        <a href="javascript:void(0);"
+                                            data-href="/creditcards/app/webform/webform-interaction-inbox" onclick="submitForm('/creditcards/app/webform/webform-interaction-inbox', true);
+                                                    setAnalyticsPost('My Interactions')">My Interactions</a>
+                                    </li>
+
+
+                                </ul>
+
+                            </li>
+
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+
+
+            <!--code for logout button-->
+
+            <div class="modal-overlay csat-modal-container" id="logout-content-popup">
+                <section class="modal csat-modal-content" id="csat-feedback-popup" style="margin-top: -267.5px;">
+                    <div class="modal-wrap">
+                        <span class="logout-popup-x-csat" id="csat-image" onclick="closeModalPopup($(this));
+                                    setAnalyticsPost('Log out');">X</span>
+                        <h2 class="modal-title">Customer Feedback</h2>
+                    </div>
+                    <section class="content">
+                        <p>Your opinion matters!</p>
+                        <p>Take a few minutes to fill out our survey to help us enhance your experience</p>
+                    </section>
+                    <div class="feed-buttons">
+                        <div class="take-feedback-content">
+                            <button id="start-button-content" class="custom-start-button"
+                                onclick="closeModalPopup($(this));">Start</button>
+                        </div>
+                        <div class="later-link">
+                            <a href="javascript:void(0);" data-dismiss="modal" class="logout-popup-x-csat"
+                                onclick="setAnalyticsPost('Log out');">Maybe Later</a>
+                        </div>
+                    </div>
+
+                </section>
+            </div>
+
+            <!--Modal for feedback-->
+            <div class="modal-overlay csat-modal-container" id="open-modal-content-popup">
+                <section class="modal csat-modal-content" style="margin-top: -267.5px;">
+                    <div class="modal-wrap">
+                        <div class="modal-heading">
+                            <span class="logout-popup-x-csat" id="csat-image" onclick="closeModalPopup($(this));
+                                        setAnalyticsPost('Log out');
+                                      ">X</span>
+                            <h2 class="modal-title">Customer Feedback</h2>
+                        </div>
+                        <div id="feedback-star-content" class="feed-back-star-wrap">
+                            <div class="question-wrap">
+                                <div class="csat-star-content">
+                                    <div id="first-question-mobile" class="question-eading">
+
+                                    </div>
+
+
+
+                                    <div>
+                                        <div class="rating-stars text-center">
+                                            <ul id="stars">
+                                                <li class="star" title="Poor" data-value="1">
+                                                    <i class="fa fa-star fa-fw"></i>
+                                                </li>
+                                                <li class="star" title="Bad" data-value="2">
+                                                    <i class="fa fa-star fa-fw"></i>
+                                                </li>
+                                                <li class="star" title="Average" data-value="3">
+                                                    <i class="fa fa-star fa-fw"></i>
+                                                </li>
+                                                <li class="star" title="Good" data-value="4">
+                                                    <i class="fa fa-star fa-fw"></i>
+                                                </li>
+                                                <li class="star" title="Excellent" data-value="5">
+                                                    <i class="fa fa-star fa-fw"></i>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="expanded-content" class="csat-expanded-content" style="display: none;">
+                                    <div class="success-box">
+                                        <div class="clearfix-csat"></div>
+                                        <div class="text-message-csat"></div>
+                                        <div class="clearfix-csat"></div>
+                                    </div>
+                                    <div class="csat-star-content" id="ques1">
+                                        <div class="question-content last-inter">
+                                            <p>Sincere apologies for the bad experience. What should we work upon to
+                                                improve your
+                                                experience next time?</p>
+                                            <div class="question-content-buttons">
+                                                <button type="button">Options available</button>
+                                                <button type="button">Responsiveness of pages</button>
+                                                <button type="button">User friendliness</button>
+                                                <button id="otherButton-csat">Other</button>
+                                                <div id="other-option-section"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="submit-feedback rat-show">
+                                        <button id="modal-cancel-button" class="logout-popup-x-csat"
+                                            onclick="setAnalyticsPost('Log out');">Cancel</button>
+                                        <button id="modal-start-button" class="review-submit"
+                                            disabled="disabled">Submit</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!--Code for thank you page-->
+            <div class="modal-overlay csat-modal-container" id="Thank-you-content-mobilepopup">
+                <section class="modal csat-modal-content" id="csat-thankyou-modal" style="margin-top: -267.5px;">
+                    <span class="logout-popup-x-csat" id="csat-image" onclick="closeModalPopup($(this));">X</span>
+                    <div class="modal-wrap">
+                        <figure class="cta-img">
+                            <img src="/creditcards/resources/img/tick.png" id="tick-image">
+                        </figure>
+                        <h2 class="modal-title">Thank you!</h2>
+                        <p class="thankyou-paragraph">Thank you for the feedback. We will act on the same to ensure
+                            better<br>
+                            customer experience going forward.
+                        </p>
+                    </div>
+                </section>
+            </div>
+
+
+            <!--#include virtual="mobile-menu.shtml" -->
+
+            <!-- SESSION TIMOUT -->
+
+
+
+            <input type="hidden" id="idleTimeLimit" value="20">
+            <input type="hidden" id="dialogDisplayLimit" value="10">
+            <input type="hidden" id="dialogTitle" value="Session Expiration">
+            <input type="hidden" id="dialogText"
+                value="Because you have been inactive, your session is about to expire.">
+            <input type="hidden" id="dialogClass" value="session-timeOut">
+            <input type="hidden" id="sessionDialog" value="session-dialog">
+            <input type="hidden" id="redirectUrl" value="/creditcards/app/user/login/error/invalidSession">
+            <input type="hidden" id="timeRemaining" value="Time remaining:">
+            <input type="hidden" id="stayLoggedIn" value="Stay Logged In">
+            <input type="hidden" id="logOutNow" value="Log Out Now">
+            <input type="hidden" id="alive_url" value="/creditcards/app/user/keepalive">
+            <input type="hidden" id="logout_url" value="/creditcards/j_spring_security_logout">
+            <input type="hidden" id="loggedout_url" value="/creditcards/app/user/loggedout">
+            <input type="hidden" id="b2b_role_id" value="USER">
+            <input type="hidden" id="alert_dropdown_limit" value="5">
+            <input type="hidden" id="alert_retry_count" value="3">
+            <input type="hidden" id="getAlertDataFlag" value="Y">
+            <input type="hidden" id="isEligibleAlerts" class="checkAANEligibilty" value="true">
+
+
+
+
+        </header>
+
+        <!-- Disclaimer -->
+        <div class="modal-overlay disclaimer-popup" id="disclaimer">
+            <section class="modal">
+                <div class="modal-wrap">
+                    <header>
+
+
+                        <img src="/creditcards/resources/img/logo.png">
+
+
+
+                        <h2 class="modal-title">Disclaimer</h2>
+                    </header>
+                    <section class="content">
+                        <p>You are being re-directed to a third party site. Please acknowledge the disclaimer before
+                            proceeding further.</p>
+                        <p>You are about to access a site, the accuracy or completeness of the materials or the
+                            reliability of any advice, opinion, statement or other information displayed or distributed
+                            through it, is not warranted by SBICPSL and shall be solely be construed to be set forth by
+                            the third party.</p>
+                        <p>You will access this site solely for the payment of your bills and you acknowledge that any
+                            reliance on any opinion, advice, statement, memorandum, or information available on the site
+                            shall be at your sole risk and consequences. </p>
+                        <p>SBICPSL and its affiliates, subsidiaries, employees, officers, directors and agents,
+                            expressly disclaim any liability for any deficiency in the services of the service provider
+                            whose site you are about to access. Neither SBICPSL nor any of its affiliates nor their
+                            directors, officers and employees will be liable to or have any responsibility of any kind
+                            for any loss that you incur in the event of any deficiency in the services of the service
+                            provider, failure or disruption of the site of the service provider, or resulting from the
+                            act or omission of any other party involved in making this site or the data contained
+                            therein available to you, or from any other cause relating to your access to, inability to
+                            access, or use of the site or these materials in accordance thereto SBICSPL and all its
+                            related parties described hereinabove stand indemnified from all proceedings or matters
+                            arising thereto.</p>
+                    </section>
+                    <div class="modal-content clearfix" id="billPayProceedBtns">
+
+                        <div class="button-wrap" id="appendPayNowForm"></div>
+
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- refer a friend start  -->
+        <!-- popup open -->
+        <div class="modal-overlay referAfriend-overlay" id="referFriend-popup">
+            <section class="modal">
+                <div class="close">X</div>
+                <div class="modal-wrap">
+                    <div class="refer-page">
+
+
+
+                        <script>
+                            var referData = {
+                                "NameParam": 'Name',
+                                "NameParamToolTip": 'Enter the name of the person you wish to refer. Please enter only alphabets. You cannot enter numbers or special characters in this field.',
+                                "MobileParam": 'Mobile Number',
+                                "MobileParamToolTip": 'Enter the 10-digit mobile number of the person you wish to refer. You cannot enter special characters in this field.',
+                                "EmailParam": 'Email',
+                                "EmailParamToolTip": 'Enter the email ID of the person, you wish to refer.',
+                                "CityParam": 'City',
+                                "cityNames": ''
+                            }
+                        </script>
+                        <section class="refer">
+                            <section class="main-wrap">
+                                <h2>Refer your friends &amp; get upto <em class="WebRupee">Rs.</em>500 Cashback per
+                                    referral</h2>
+                                <span>You can refer up to 5 friends to SBI Card at one go.</span>
+                            </section>
+                            <section class="main-wrap">
+
+                                <div class="button-wrap">
+                                    <input type="button" class="button primary" id="add-row" value="Add Row">
+
+                                </div>
+                            </section>
+                            <section class="main-wrap">
+                                <div class="mandatory-fld-msg">All fields are mandatory unless otherwise mentioned.
+                                </div>
+                                <form action="#" data-href="/creditcards/app/refer/submit-refer-page" id="refer-from"
+                                    name="refer-from" method="POST" novalidate="novalidate">
+                                    <div class="row-container">
+                                        <ul class="form-field-list ">
+                                            <li>
+                                                <div class="field-wrap"><label class="refer-lable"
+                                                        for="name">Name</label><input type="text" name="name-1"
+                                                        onkeypress="return referAFriendValidator(event);" maxlength="50"
+                                                        class="name" id="name-1" aria-required="true">
+                                                    <article class="tooltip-hr tooltip-card">
+                                                        <p>Enter the name of the person you wish to refer. Please enter
+                                                            only alphabets. You cannot enter numbers or special
+                                                            characters in this field.</p>
+                                                    </article>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="field-wrap"><label class="refer-lable" for="mobile">Mobile
+                                                        Number</label><input type="text" name="mobile-1"
+                                                        class="mobile only-numeric" id="mobile-1" value=""
+                                                        maxlength="10" aria-required="true">
+                                                    <article class="tooltip-hr tooltip-card">
+                                                        <p>Enter the 10-digit mobile number of the person you wish to
+                                                            refer. You cannot enter special characters in this field.
+                                                        </p>
+                                                    </article>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="field-wrap"><label class="refer-lable"
+                                                        for="mailAdd">Email</label><input type="text" name="email-1"
+                                                        maxlength="50" onkeypress="return emailValidator(event);"
+                                                        class="emailAdd" id="email-1" aria-required="true">
+                                                    <article class="tooltip-hr tooltip-card">
+                                                        <p>Enter the email ID of the person, you wish to refer.</p>
+                                                    </article>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="field-wrap"><label class="refer-lable"
+                                                        for="city">City</label>
+                                                    <div class="fancy-select-wrap">
+                                                        <div class="fancy-select"><select class="fancy city fancified"
+                                                                name="city-1" id="city-1" autocomplete="off"
+                                                                aria-required="true"
+                                                                style="width: 1px; height: 1px; display: block; position: absolute; top: 0px; left: 0px; opacity: 0;">
+                                                                <option value="">Select City</option>
+                                                                <option value="Agra">Agra</option>
+                                                                <option value="Ahmedabad">Ahmedabad</option>
+                                                                <option value="Amrawati">Amrawati</option>
+                                                                <option value="Aurangabad">Aurangabad</option>
+                                                                <option value="Bangalore">Bangalore</option>
+                                                                <option value="Baroda">Baroda</option>
+                                                                <option value="Bhillai">Bhillai</option>
+                                                                <option value="Bhopal">Bhopal</option>
+                                                                <option value="Bhubaneshwar">Bhubaneshwar</option>
+                                                                <option value="Bokaro">Bokaro</option>
+                                                                <option value="Chandigarh">Chandigarh</option>
+                                                                <option value="Chennai">Chennai</option>
+                                                                <option value="Cochin">Cochin</option>
+                                                                <option value="Coimbatore">Coimbatore</option>
+                                                                <option value="Cuttack">Cuttack</option>
+                                                                <option value="Dehradun">Dehradun</option>
+                                                                <option value="Delhi-NCR">Delhi-NCR</option>
+                                                                <option value="Dhanbad">Dhanbad</option>
+                                                                <option value="Goa">Goa</option>
+                                                                <option value="Guwahati">Guwahati</option>
+                                                                <option value="Hyderabad">Hyderabad</option>
+                                                                <option value="Indore">Indore</option>
+                                                                <option value="Jabalpur">Jabalpur</option>
+                                                                <option value="Jaipur">Jaipur</option>
+                                                                <option value="Jalandhar">Jalandhar</option>
+                                                                <option value="Jamshedpur">Jamshedpur</option>
+                                                                <option value="Kakinada">Kakinada</option>
+                                                                <option value="Kanpur">Kanpur</option>
+                                                                <option value="Kolhapur">Kolhapur</option>
+                                                                <option value="Kolkata">Kolkata</option>
+                                                                <option value="Lucknow">Lucknow</option>
+                                                                <option value="Ludhiana">Ludhiana</option>
+                                                                <option value="Madurai">Madurai</option>
+                                                                <option value="Mangalore">Mangalore</option>
+                                                                <option value="Mumbai">Mumbai</option>
+                                                                <option value="Mysore">Mysore</option>
+                                                                <option value="Nagpur">Nagpur</option>
+                                                                <option value="Nasik">Nasik</option>
+                                                                <option value="Nellore">Nellore</option>
+                                                                <option value="Patiala">Patiala</option>
+                                                                <option value="Patna">Patna</option>
+                                                                <option value="Pondicherry">Pondicherry</option>
+                                                                <option value="Pune">Pune</option>
+                                                                <option value="Raipur">Raipur</option>
+                                                                <option value="Rajamundhry">Rajamundhry</option>
+                                                                <option value="Ranchi">Ranchi</option>
+                                                                <option value="Rourkela">Rourkela</option>
+                                                                <option value="Shimla">Shimla</option>
+                                                                <option value="Surat">Surat</option>
+                                                                <option value="Tirupati">Tirupati</option>
+                                                                <option value="Trichy">Trichy</option>
+                                                                <option value="Trivandrum">Trivandrum</option>
+                                                                <option value="Updaipur">Updaipur</option>
+                                                                <option value="Vijayawada">Vijayawada</option>
+                                                                <option value="Vizag">Vizag</option>
+                                                            </select>
+                                                            <div class="trigger">Select City</div>
+                                                            <ul class="options">
+                                                                <li data-id="undefined" data-raw-value="Agra">Agra</li>
+                                                                <li data-id="undefined" data-raw-value="Ahmedabad">
+                                                                    Ahmedabad</li>
+                                                                <li data-id="undefined" data-raw-value="Amrawati">
+                                                                    Amrawati</li>
+                                                                <li data-id="undefined" data-raw-value="Aurangabad">
+                                                                    Aurangabad</li>
+                                                                <li data-id="undefined" data-raw-value="Bangalore">
+                                                                    Bangalore</li>
+                                                                <li data-id="undefined" data-raw-value="Baroda">Baroda
+                                                                </li>
+                                                                <li data-id="undefined" data-raw-value="Bhillai">Bhillai
+                                                                </li>
+                                                                <li data-id="undefined" data-raw-value="Bhopal">Bhopal
+                                                                </li>
+                                                                <li data-id="undefined" data-raw-value="Bhubaneshwar">
+                                                                    Bhubaneshwar</li>
+                                                                <li data-id="undefined" data-raw-value="Bokaro">Bokaro
+                                                                </li>
+                                                                <li data-id="undefined" data-raw-value="Chandigarh">
+                                                                    Chandigarh</li>
+                                                                <li data-id="undefined" data-raw-value="Chennai">Chennai
+                                                                </li>
+                                                                <li data-id="undefined" data-raw-value="Cochin">Cochin
+                                                                </li>
+                                                                <li data-id="undefined" data-raw-value="Coimbatore">
+                                                                    Coimbatore</li>
+                                                                <li data-id="undefined" data-raw-value="Cuttack">Cuttack
+                                                                </li>
+                                                                <li data-id="undefined" data-raw-value="Dehradun">
+                                                                    Dehradun</li>
+                                                                <li data-id="undefined" data-raw-value="Delhi-NCR">
+                                                                    Delhi-NCR</li>
+                                                                <li data-id="undefined" data-raw-value="Dhanbad">Dhanbad
+                                                                </li>
+                                                                <li data-id="undefined" data-raw-value="Goa">Goa</li>
+                                                                <li data-id="undefined" data-raw-value="Guwahati">
+                                                                    Guwahati</li>
+                                                                <li data-id="undefined" data-raw-value="Hyderabad">
+                                                                    Hyderabad</li>
+                                                                <li data-id="undefined" data-raw-value="Indore">Indore
+                                                                </li>
+                                                                <li data-id="undefined" data-raw-value="Jabalpur">
+                                                                    Jabalpur</li>
+                                                                <li data-id="undefined" data-raw-value="Jaipur">Jaipur
+                                                                </li>
+                                                                <li data-id="undefined" data-raw-value="Jalandhar">
+                                                                    Jalandhar</li>
+                                                                <li data-id="undefined" data-raw-value="Jamshedpur">
+                                                                    Jamshedpur</li>
+                                                                <li data-id="undefined" data-raw-value="Kakinada">
+                                                                    Kakinada</li>
+                                                                <li data-id="undefined" data-raw-value="Kanpur">Kanpur
+                                                                </li>
+                                                                <li data-id="undefined" data-raw-value="Kolhapur">
+                                                                    Kolhapur</li>
+                                                                <li data-id="undefined" data-raw-value="Kolkata">Kolkata
+                                                                </li>
+                                                                <li data-id="undefined" data-raw-value="Lucknow">Lucknow
+                                                                </li>
+                                                                <li data-id="undefined" data-raw-value="Ludhiana">
+                                                                    Ludhiana</li>
+                                                                <li data-id="undefined" data-raw-value="Madurai">Madurai
+                                                                </li>
+                                                                <li data-id="undefined" data-raw-value="Mangalore">
+                                                                    Mangalore</li>
+                                                                <li data-id="undefined" data-raw-value="Mumbai">Mumbai
+                                                                </li>
+                                                                <li data-id="undefined" data-raw-value="Mysore">Mysore
+                                                                </li>
+                                                                <li data-id="undefined" data-raw-value="Nagpur">Nagpur
+                                                                </li>
+                                                                <li data-id="undefined" data-raw-value="Nasik">Nasik
+                                                                </li>
+                                                                <li data-id="undefined" data-raw-value="Nellore">Nellore
+                                                                </li>
+                                                                <li data-id="undefined" data-raw-value="Patiala">Patiala
+                                                                </li>
+                                                                <li data-id="undefined" data-raw-value="Patna">Patna
+                                                                </li>
+                                                                <li data-id="undefined" data-raw-value="Pondicherry">
+                                                                    Pondicherry</li>
+                                                                <li data-id="undefined" data-raw-value="Pune">Pune</li>
+                                                                <li data-id="undefined" data-raw-value="Raipur">Raipur
+                                                                </li>
+                                                                <li data-id="undefined" data-raw-value="Rajamundhry">
+                                                                    Rajamundhry</li>
+                                                                <li data-id="undefined" data-raw-value="Ranchi">Ranchi
+                                                                </li>
+                                                                <li data-id="undefined" data-raw-value="Rourkela">
+                                                                    Rourkela</li>
+                                                                <li data-id="undefined" data-raw-value="Shimla">Shimla
+                                                                </li>
+                                                                <li data-id="undefined" data-raw-value="Surat">Surat
+                                                                </li>
+                                                                <li data-id="undefined" data-raw-value="Tirupati">
+                                                                    Tirupati</li>
+                                                                <li data-id="undefined" data-raw-value="Trichy">Trichy
+                                                                </li>
+                                                                <li data-id="undefined" data-raw-value="Trivandrum">
+                                                                    Trivandrum</li>
+                                                                <li data-id="undefined" data-raw-value="Updaipur">
+                                                                    Updaipur</li>
+                                                                <li data-id="undefined" data-raw-value="Vijayawada">
+                                                                    Vijayawada</li>
+                                                                <li data-id="undefined" data-raw-value="Vizag">Vizag
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="button-wrap">
+                                        <input type="submit" class="button primary" id="add-row-submit" value="Submit"
+                                            onclick="setAnalyticsPost('Submit');">
+                                    </div>
+                                </form>
+                            </section>
+                        </section>
+
+                    </div>
+                    <div class="refer-success-page">
+
+
+
+                        <section class="refer">
+                            <header class="main-wrap">
+                                <h2>Refer your friends &amp; get upto <em class="WebRupee">Rs.</em>500 Cashback per
+                                    referral</h2>
+                            </header>
+
+                            <article class="notification confirmation">
+                                <p>Hi FVESTAAOT SIT2, Thank you for referring <span class="friendNames"></span>. We have
+                                    also sent you an email and SMS about your referral. We will contact your friend(s)
+                                    shortly.</p>
+                                <p>The Reward points equivalent to the cashback (upto <em class="WebRupee">Rs.</em> 500)
+                                    would be credited to your account within 45 days of card issuance to the referred
+                                    cardholder. For further details, please refer to <a
+                                        href="https://www.sbicard.com/en/tnc.page#terms#rewards" target="_blank">Reward
+                                        Terms and Conditions</a>.</p>
+                            </article>
+                            <div class="success-ok-btn">
+                                <a href="javascript:void(0);" class="button primary" id="btn-ok">Ok</a>
+                            </div>
+
+                        </section>
+
+
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- popup close -->
+        <!-- refer a friend end  -->
+
+        <div id="dynaform"></div>
+
+
+
+
+        <!--#include virtual="components/dashboard-header.shtml" -->
+
+
+
+
+
+
+
+        <div class="content clearfix">
+
+
+
+
+
+
+
+
+
+            <div class="sidebar">
+                <article class="user-info">
+                    <div class="content-wrap">
+                        <h3>
+                            <!-- span>Welcome</span-->
+                            <span>Welcome</span> FVESTAAOT SIT2
+                        </h3>
+
+                        <p>
+                        </p>
+                        <div>Last Login: 02 Sep 2020, 07.11 PM</div>
+                        <div>Email: <span id="email-address">SIXXXXXX@EMAIL.COM</span></div>
+                        <div>Mobile: <span id="mobile-number">XXXXXX2300</span></div>
+                        <p></p>
+                        <a href="javascript:void(0);" class="profile-link" onclick="submitForm('/creditcards/app/myprofile/contact-details-page', true);
+                                    setAnalyticsPost('My Profile')"><span
+                                class="icon profile my-profile-icon"></span>My Profile</a>
+                    </div>
+                </article>
+                <div class="block">
+                    <ul class="tab-menu">
+                        <li>
+                            <a href="javascript:void(0);" onclick="submitForm('/creditcards/app/dashboard', true);
+                                        setAnalyticsPost('My Dashboard')">
+                                <span class="icon dashboard"></span>
+                                My Dashboard
+                            </a>
+                        </li>
+
+
+                    </ul>
+                    <ul class="side-menu">
+
+                        <input type="hidden" name="unreadMailCount" value="0">
+
+                        <li>
+
+
+                            <a href="javascript:void(0);" data-href="/creditcards" target="" onclick="submitForm('/creditcards', false);
+                                        setAnalyticsPost('My Accounts')">
+                                <span class="icon user"></span>
+                                My Accounts
+
+                                <span class="arrow"></span>
+                            </a>
+
+
+
+
+                            <ul class="child-node">
+
+
+                                <li data-val="Card Statements">
+                                    <a href="javascript:void(0);"
+                                        data-href="/creditcards/app/myaccount/card-statements-page" onclick="submitForm('/creditcards/app/myaccount/card-statements-page', true);
+                                                setAnalyticsPost('Card Statements')">Card Statements</a>
+                                </li>
+
+
+
+                                <li data-val="Unbilled Transactions">
+                                    <a href="javascript:void(0);"
+                                        data-href="/creditcards/app/myaccount/unbilled-txn-page" onclick="submitForm('/creditcards/app/myaccount/unbilled-txn-page', true);
+                                                setAnalyticsPost('Unbilled Transactions')">Unbilled Transactions</a>
+                                </li>
+
+
+
+                                <li data-val="Transaction History">
+                                    <a href="javascript:void(0);"
+                                        data-href="/creditcards/app/myaccount/transaction-history-page" onclick="submitForm('/creditcards/app/myaccount/transaction-history-page', true);
+                                                setAnalyticsPost('Transaction History')">Transaction History</a>
+                                </li>
+
+
+
+                                <li data-val="Payment History">
+                                    <a href="javascript:void(0);"
+                                        data-href="/creditcards/app/myaccount/payment-history-page" onclick="submitForm('/creditcards/app/myaccount/payment-history-page', true);
+                                                setAnalyticsPost('Payment History')">Payment History</a>
+                                </li>
+
+
+
+                                <li data-val="Add-on Card Details">
+                                    <a href="javascript:void(0);"
+                                        data-href="/creditcards/app/myaccount/addon-card_detail-page/0" onclick="submitForm('/creditcards/app/myaccount/addon-card_detail-page/0', true);
+                                                setAnalyticsPost('Add-on Card Details')">Add-on Card Details</a>
+                                </li>
+
+
+
+                                <li data-val="Spend Analyzer">
+                                    <a href="javascript:void(0);" data-href="/creditcards/app/myaccount/spend-analyzer"
+                                        onclick="submitForm('/creditcards/app/myaccount/spend-analyzer', true);
+                                                setAnalyticsPost('Spend Analyzer')">Spend Analyzer</a>
+                                </li>
+
+
+
+                                <li data-val="Manage PIN">
+                                    <a href="javascript:void(0);" data-href="/creditcards/app/myaccount/manage-pin-page"
+                                        onclick="submitForm('/creditcards/app/myaccount/manage-pin-page', true);
+                                                setAnalyticsPost('Manage PIN')">Manage PIN</a>
+                                </li>
+
+
+
+                                <li data-val="Submit KYC Documents">
+                                    <a href="javascript:void(0);"
+                                        data-href="/creditcards/app/requests/know-your-customer" onclick="submitForm('/creditcards/app/requests/know-your-customer', true);
+                                                setAnalyticsPost('Submit KYC Documents')">KYC Renewal
+                                                <!-- <sup class="lhsMenu-highlighter">Due</sup> -->
+                                            </a>
+                                </li>
+
+
+                            </ul>
+
+                        </li>
+
+                        <li>
+
+
+                            <a href="javascript:void(0);" data-href="/creditcards" target="" onclick="submitForm('/creditcards', false);
+                                        setAnalyticsPost('Benefits')">
+                                <span class="icon thumb"></span>
+                                Benefits
+
+                                <span class="arrow"></span>
+                            </a>
+
+
+
+
+                            <ul class="child-node">
+
+
+                                <li data-val="Balance Transfer on EMI">
+                                    <a href="javascript:void(0);"
+                                        data-href="/creditcards/app/benefits/balance-transfer-emi" onclick="submitForm('/creditcards/app/benefits/balance-transfer-emi', true);
+                                                setAnalyticsPost('Balance Transfer on EMI')">Balance Transfer on
+                                        EMI</a>
+                                </li>
+
+
+
+                                <li data-val="Balance Transfer">
+                                    <a href="javascript:void(0);" data-href="/creditcards/app/benefits/balance-transfer"
+                                        onclick="submitForm('/creditcards/app/benefits/balance-transfer', true);
+                                                setAnalyticsPost('Balance Transfer')">Balance Transfer</a>
+                                </li>
+
+
+
+                                <li data-val="Encash">
+                                    <a href="javascript:void(0);" data-href="/creditcards/app/benefits/encash" onclick="submitForm('/creditcards/app/benefits/encash', true);
+                                                setAnalyticsPost('Encash')">Encash</a>
+                                </li>
+
+
+
+                                <li class="active" data-val="Easy Money">
+                                    <a href="javascript:void(0);" data-href="/creditcards/app/benefits/easy-money-draft"
+                                        onclick="submitForm('/creditcards/app/benefits/easy-money-draft', true);
+                                                setAnalyticsPost('Easy Money')">Easy Money</a>
+                                </li>
+
+
+
+                                <li data-val="Flexipay">
+                                    <a href="javascript:void(0);" data-href="/creditcards/app/benefits/flexipay"
+                                        onclick="submitForm('/creditcards/app/benefits/flexipay', true);
+                                                setAnalyticsPost('Flexipay')">Flexipay</a>
+                                </li>
+
+
+
+                                <li data-val="Card Upgrade">
+                                    <a href="javascript:void(0);" data-href="/creditcards/app/benefits/flip-page"
+                                        onclick="submitForm('/creditcards/app/benefits/flip-page', true);
+                                                setAnalyticsPost('Card Upgrade')">Card Upgrade</a>
+                                </li>
+
+
+
+                                <li data-val="Credit Limit Increase">
+                                    <a href="javascript:void(0);" data-href="/creditcards/app/benefits/clip-page"
+                                        onclick="submitForm('/creditcards/app/benefits/clip-page', true);
+                                                setAnalyticsPost('Credit Limit Increase')">Credit Limit Increase</a>
+                                </li>
+
+
+
+                                <li data-val="Foreclosure">
+                                    <a href="javascript:void(0);" data-href="/creditcards/app/benefits/foreclosure"
+                                        onclick="submitForm('/creditcards/app/benefits/foreclosure', true);
+                                                setAnalyticsPost('Foreclosure')">Foreclosure</a>
+                                </li>
+
+
+
+                                <li data-val="Track Booked Offers">
+                                    <a href="javascript:void(0);"
+                                        data-href="/creditcards/app/benefits/track-booked-offers" onclick="submitForm('/creditcards/app/benefits/track-booked-offers', true);
+                                                setAnalyticsPost('Track Booked Offers')">Track Booked Offers</a>
+                                </li>
+
+
+
+
+                            </ul>
+
+                        </li>
+
+                        <li>
+
+
+
+                            <a href="javascript:void(0);" data-href="/creditcards/app/billdesk/utility-billpay"
+                                target="" onclick="submitForm('/creditcards/app/billdesk/utility-billpay', true);
+                                        setAnalyticsPost('Utility Bill Payment')">
+                                <span class="icon bill"></span>
+                                Utility Bill Payment
+                            </a>
+
+
+
+                        </li>
+
+
+                        <li><a href="#"><span class="icon card"></span> Apply for SBI Card</a> </li>
+
+
+                        <li>
+
+
+
+                            <a href="javascript:void(0);" data-href="/creditcards/app/offers/summary" target="" onclick="submitForm('/creditcards/app/offers/summary', true);
+                                        setAnalyticsPost('Offers')">
+                                <span class="icon cards"></span>
+                                Offers
+                            </a>
+
+
+
+                        </li>
+
+
+
+                        <li>
+
+
+                            <a href="javascript:void(0);" data-href="/creditcards" target="" onclick="submitForm('/creditcards', false);
+                                        setAnalyticsPost('Rewards')">
+                                <span class="icon rewards"></span>
+                                Rewards
+
+                                <span class="arrow"></span>
+                            </a>
+
+
+
+
+                            <ul class="child-node">
+
+
+                                <li data-val="Reward Summary">
+                                    <a href="javascript:void(0);" data-href="/creditcards/app/rewards/rewards-summary"
+                                        onclick="submitForm('/creditcards/app/rewards/rewards-summary', true);
+                                                setAnalyticsPost('Reward Summary')">Reward Summary</a>
+                                </li>
+
+
+
+                                <li data-val="Redeem Rewards">
+                                    <a href="javascript:void(0);" data-href="/creditcards/app/rewards/catalog" onclick="submitForm('/creditcards/app/rewards/catalog', true);
+                                                setAnalyticsPost('Redeem Rewards')">Redeem Rewards</a>
+                                </li>
+
+
+
+                                <li data-val="Redemption History">
+                                    <a href="javascript:void(0);"
+                                        data-href="/creditcards/app/rewards/redemption-history" onclick="submitForm('/creditcards/app/rewards/redemption-history', true);
+                                                setAnalyticsPost('Redemption History')">Redemption History</a>
+                                </li>
+
+
+                            </ul>
+
+                        </li>
+
+                        <li class="active"> <a href="javascript:void(0);"><span class="icon card-app"></span> Services<span
+                                    class="arrow"></span></a>
+
+                            <ul class="child-node">
+
+                                <li> <a href="javascript:void(0);">Report a Lost/Stolen Card</a></li>
+                                <li> <a href="javascript:void(0);">Re-issue/Replace Card</a></li>
+                                <li> <a href="javascript:void(0);">WhatsApp Connect</a></li>
+                                <li class="active"> <a href="javascript:void(0);">Data Principal Rights</a></li>
+                                <li> <a href="javascript:void(0);">Request for a Duplicate Statement</a></li>
+                                <li> <a href="javascript:void(0);">Card Activation</a></li>
+                                <li> <a href="javascript:void(0);">Track Service Request</a></li>
+                                <li> <a href="javascript:void(0);">Opt for e-statement</a></li>
+                                <li> <a href="javascript:void(0);">Add-on Card</a></li>
+                                <li> <a href="javascript:void(0);">International Number Update</a></li>
+                                <li> <a href="javascript:void(0);">Credit balance refund</a></li>
+                                <li> <a href="javascript:void(0);">OTP for IVR/Moto</a></li>
+                                <li> <a href="javascript:void(0);">Dispute Transaction</a></li>
+                                <li> <a href="javascript:void(0);">Track Dispute</a></li>
+                                <li> <a href="javascript:void(0);">Manage Tokenized Payments</a></li>
+                                <li> <a href="javascript:void(0);">Manage Card Usage</a></li>
+
+
+
+                            </ul>
+
+                        </li>
+
+
+
+                        <li>
+
+
+                            <a href="javascript:void(0);" data-href="/creditcards" target="" onclick="submitForm('/creditcards', false);
+                                        setAnalyticsPost('Insurance ')">
+                                <span class="icon insuranceIcon"></span>
+                                Insurance
+
+                                <span class="arrow"></span>
+                            </a>
+
+
+
+
+                            <ul class="child-node">
+
+
+                                <li data-val="Card Protection">
+                                    <a href="javascript:void(0);"
+                                        data-href="/creditcards/app/insurance/products/category/card-protection"
+                                        onclick="submitForm('/creditcards/app/insurance/products/category/card-protection', true);
+                                                setAnalyticsPost('Card Protection')">Card Protection</a>
+                                </li>
+
+
+
+                                <li data-val="Health Insurance">
+                                    <a href="javascript:void(0);"
+                                        data-href="/creditcards/app/insurance/products/category/health-insurance"
+                                        onclick="submitForm('/creditcards/app/insurance/products/category/health-insurance', true);
+                                                setAnalyticsPost('Health Insurance')">Health Insurance</a>
+                                </li>
+
+
+
+                                <li data-val="Additional Health Cover">
+                                    <a href="javascript:void(0);"
+                                        data-href="/creditcards/app/insurance/products/category/additional-health-cover"
+                                        onclick="submitForm('/creditcards/app/insurance/products/category/additional-health-cover', true);
+                                                setAnalyticsPost('Additional Health Cover')">Additional Health
+                                        Cover</a>
+                                </li>
+
+
+
+                                <li data-val="Personal Accident Insurance">
+                                    <a href="javascript:void(0);"
+                                        data-href="/creditcards/app/insurance/products/category/personal-accident-insurance"
+                                        onclick="submitForm('/creditcards/app/insurance/products/category/personal-accident-insurance', true);
+                                                setAnalyticsPost('Personal Accident Insurance')">Personal Accident
+                                        Insurance</a>
+                                </li>
+
+
+
+                                <li data-val="Motor Insurance">
+                                    <a href="javascript:void(0);"
+                                        data-href="/creditcards/app/insurance/products/category/motor-insurance"
+                                        onclick="submitForm('/creditcards/app/insurance/products/category/motor-insurance', true);
+                                                setAnalyticsPost('Motor Insurance')">Motor Insurance</a>
+                                </li>
+
+
+
+                                <li data-val="Life Insurance">
+                                    <a href="javascript:void(0);"
+                                        data-href="/creditcards/app/insurance/products/category/life-insurance" onclick="submitForm('/creditcards/app/insurance/products/category/life-insurance', true);
+                                                setAnalyticsPost('Life Insurance')">Life Insurance</a>
+                                </li>
+
+
+
+                                <li data-val="Other Plans">
+                                    <a href="javascript:void(0);"
+                                        data-href="/creditcards/app/insurance/products/category/other-plans" onclick="submitForm('/creditcards/app/insurance/products/category/other-plans', true);
+                                                setAnalyticsPost('Other Plans')">Other Plans</a>
+                                </li>
+
+
+                            </ul>
+
+                        </li>
+
+
+                        <li>
+
+
+                            <a href="javascript:void(0);" data-href="/creditcards" target="" onclick="submitForm('/creditcards', false);
+                                        setAnalyticsPost('MailBox')">
+                                <span class="icon webform"></span>
+                                MailBox
+
+                                <span class="arrow"></span>
+                                <sup class="unReadClass">&nbsp;0</sup></a>
+
+
+
+
+                            <ul class="child-node">
+
+
+                                <li data-val="Compose">
+                                    <a href="javascript:void(0);"
+                                        data-href="/creditcards/app/webform/webform-interaction" onclick="submitForm('/creditcards/app/webform/webform-interaction', true);
+                                                setAnalyticsPost('Compose')">Compose</a>
+                                </li>
+
+
+
+                                <li data-val="My Interactions">
+                                    <a href="javascript:void(0);"
+                                        data-href="/creditcards/app/webform/webform-interaction-inbox" onclick="submitForm('/creditcards/app/webform/webform-interaction-inbox', true);
+                                                setAnalyticsPost('My Interactions')">My Interactions</a>
+                                </li>
+
+
+                            </ul>
+
+                        </li>
+
+                    </ul>
+                </div>
+
+
+                <div class="block padding-box">
+
+
+
+
+                    <article class="cta-unit">
+
+
+                        <p><a href="javascript:void(0);"
+                                onclick="submitForm('/creditcards/app/requests/addon-card-request-page', true);"
+                                class="sidebar-image"><img src="/creditcards/resources/img/post-login-page-banner.png"
+                                    alt="Banner Image"></a></p>
+                    </article>
+
+
+                </div>
+
+
+
+            </div>
+
+
+
+            <!--#include virtual="side-bar.shtml" -->
+            <div class="main">
+
+
+                <article class="card-summary inner sbi-primeamex">
+
+                    <form method="POST" id="card-details-main">
+                        <div class="top-row clearfix">
+                            <div class="select-card">
+                                <label>My Card</label>
+                                <div class="field-wrap">
+                                    <div class="fancy-select-wrap">
+                                        <div class="fancy-select"><select class="fancy fancified" id="user-card"
+                                                name="cardNumberIndex" autocomplete="off"
+                                                data-href="/creditcards/app/dashboard/change-account" data-selected="0"
+                                                style="width: 1px; height: 1px; display: block; position: absolute; top: 0px; left: 0px; opacity: 0;">
+
+
+
+
+                                                <option value="0" selected="selected">XXXX-XXXXXX-X1151</option>
+
+
+
+
+
+                                            </select>
+                                            <div class="trigger">XXXX-XXXXXX-X1151</div>
+                                            <ul class="options">
+                                                <li data-id="undefined" data-raw-value="0" class="selected">
+                                                    XXXX-XXXXXX-X1151</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="hidden" name="synchronizerToken" value="TIR7v6eBuzNlK3PekSTOvLHjj2uxRcqibhmf">
+                    </form>
+
+
+
+                </article>
+
+
+
+
+
+
+                <!--#include virtual="card-details.shtml" -->
+
+
+
+
+
+
+
+                <div class="page-top mobile-custom-gap" id="hide-on-e-card">
+                    <div class="left-heading-viw">
+                        <h3>DPDP Act</h3>
+
+                    </div>
+                    <div class="right-links">
+                        <!-- <a href="https://www.sbicard.com/en/faq/update-contact-details.page"
+                            class="right-link have-question" target="_blank"><span class="icon question"></span>Have
+                            Questions</a> -->
+                    </div>
+                    <div class="left-heading-viw w-100 full-width">
+                        <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dignissim consequat vehicula. Nullam tincidunt hendrerit nunc vel commodo. Nullam posuere pretium mauris at blandit.</p>
+                    </div>
+
+                </div>
+                <section class="multicard-process accessbility-handled-wrap dpdp-joureny-wrap">
+                    <section class="main-wrap my-profile">
+                        <h2>Data Principal Rights </h2>
+                        <div class="manage-constant-main-links-wrap flex justify-content-between">
+                            <a href="manage-consent.html" class="flex">
+                                <span class="manage-constant-icon-and-link-block flex items-center">
+                                    <span class="manage-constant-icon-block flex">
+                                        <img src="../img/manage-request.svg" alt="" aria-hidden="true">
+                                    </span>
+                                    <span class="manage-constant-link-block">MANAGE REQUEST</span>
+                                </span>
+                                <span class="manage-constant-right-arrow">
+                                    <img src="../img/filled-right-arrow.svg" alt="" aria-hidden="true">
+                                </span>
+                            </a>
+                            <a href="#" class="flex">
+                                <span class="manage-constant-icon-and-link-block">
+                                    <span class="manage-constant-icon-block">
+                                        <img src="../img/manage-consent.svg" alt="" aria-hidden="true">
+                                    </span>
+                                    <span class="manage-constant-link-block">MANAGE CONSENT</span>
+                                </span>
+                                <span class="manage-constant-right-arrow">
+                                    <img src="../img/filled-right-arrow.svg" alt="" aria-hidden="true">
+                                </span>
+                            </a>
+                        </div>
+                    </section>
+
+                    
+
+                    
+
+                    <section class="otp-section-block phone-submit-otp-block">
+                        <hr>
+
+                        <section class="main-wrap my-profile active bank-detail-wrapp">
+                            <div class="gray-block">
+                                <div class="card-view-holder message-seccess-view">
+                                    <div class="list-container-selectbox flex-row align-item-center cong-message">
+                                        <h2 class="trans-style d-inline-block m-0 mr-5">Enter One-Time Password</h2>
+                                        <p>Please enter One TIme Password (OTP) that has been sent on your new Mobile
+                                            Number +91 XXXXXX6732. If you have not received the OTP, click Resend OTP
+                                        </p>
+                                        <div class="otp-block">
+                                            <label>Enter OTP<span class="red-text">*</span></label>
+                                            <input type="number" onclick="viewEditInput3();" />
+                                            <a href="#" class="input-blue-text">Resend OTP</a>
+                                        </div>
+                                        <div class="otp-submit-block">
+                                            <a href="kyc-flow.html"
+                                                class="step-2 blue-btn mb-0 gray-btn pointer-events-none"
+                                                id="v_e_submit_3">Submit</a>
+                                            <a href="#" class="step-2 blue-btn gray-btn mb-0">Cancel</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </section>
+                </section>
+
+            </div>
+        </div>
+
+        <div id="myModal" class="modal custom-modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close" id="close">&times;</span>
+                <div class="modal-header text-center">
+                    <h2 class="modal-title">OTP Verification</h2>
+                </div>
+                <section class="content text-center">
+                    <p>Verify by entering the 6-digit OTP sent on your mobile number</p>
+                    <div class="blue-no">+91 XXXXXX2300</div>
+                    <form class="otp-form">
+                        <div class="form-group align-items-center mt-0">
+                            <div class="col-md-12">
+                                <div class="form-control">
+                                    <input type="password" id="otp" name="otp" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-15 align-items-center text-center">
+                            <div> <a href="#hide-on-e-card" class="blue-btn small-width mb-0"
+                                    id="multicard-process-show">Submit</a></div>
+                            <div class="mt-10"><a href="javascript:void(0);" class="">Resend OTP</a></div>
+                        </div>
+
+                    </form>
+                </section>
+            </div>
+
+        </div>
+
+        <form>
+            <div class="modal-overlay neft-ifse-popup " id="neft-ifsc-popup">
+                <section class="modal neft-ifsc-modal" id="neft-searchPopup" style="margin-top: -190px;">
+                    <div class="modal-wrap">
+                        <header>
+                            <span class="close-neft-popup"></span>
+                            <h1 class="modal-title">Fill in the details below to find IFSC code of your bank</h1>
+
+                        </header>
+                        <section class="content">
+                            <ul class="form-field-list" id="neftPopupFields">
+                                <li class="request-boxes1">
+                                    <label class="neft-left-label" for="name">Bank Name</label>
+                                    <div class="field-wrap">
+                                        <input type="text" name="name" id="neftBankName" value="">
+                                        <article class="tooltip tooltip-w190">
+                                            <p>Start typing and choose from the list of banks shown</p>
+                                        </article>
+                                    </div>
+                                </li>
+                                <li class="request-boxes1">
+                                    <label class="neft-left-label">City</label>
+                                    <div class="field-wrap name-txtbox3">
+                                        <input type="text" id="neftCityDetail" disabled="disabled">
+                                        <article class="tooltip tooltip-w190">
+                                            <p>Enter first 3 letters of city name and select from the list. <br>
+
+                                            </p>
+                                        </article>
+                                    </div>
+                                </li>
+                                <li class="request-boxes1">
+                                    <label class="neft-left-label">Search Branch</label>
+                                    <div class="field-wrap">
+                                        <input type="text" id="neftBranchHint" disabled="disabled">
+                                        <article class="tooltip tooltip-w190">
+                                            <p>Enter at least first 3 letters of branch/area name and click on
+                                                'Search'<br>
+
+                                                Eg: If branch is 'Dwarka, type 'Dwa' and click on Search</p>
+                                        </article>
+                                    </div>
+                                </li>
+                            </ul>
+                        </section>
+
+                    </div>
+                    <div class="modal-content clearfix">
+                        <div class="reset-box1"> <a href="javascript:void(0);" id="reset-search-fields"
+                                class="button secondary"> Reset</a> </div>
+                        <div class="neft-button-wrap">
+                            <a href="javascript:void(0);" class="button primary branch-searchBtn"
+                                id="neft-srchBtn">Search</a>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="modal neft-bankdetails-popup hide kyc-modal" id="neft-bankDetailPopup"
+                    style="margin-top: -190px;">
+                    <div class="modal-wrap">
+                        <header>
+                            <span class="close-neft-popup"></span>
+                            <h1 class="modal-title">Select the branch</h1>
+
+                        </header>
+                        <div id="listLength"></div>
+                        <input type="hidden" class="hidenListCount">
+                        <div class="text-box3">
+                            <span class="neft-headCol1">SELECT </span>
+                            <span class="neft-headCol2">IFSC </span>
+                            <span class="neft-headCol3">BANK</span>
+                            <span class="neft-headCol4">BRANCH</span>
+                            <span class="neft-headCol5">ADDRESS</span>
+                        </div>
+                        <div id="dynamicSerachList"></div>
+                        <div id="filteredErrMsg"></div>
+                        <div class="load-more-list bank-detail-load">
+                            <a class="button load-more-link" href="javascript:void(0);" id="load-more-bankDetails">Load
+                                More <span id="neft-load-more-text"></span></a>
+                        </div>
+                    </div>
+                    <div class="modal-content clearfix">
+                        <div class="reset-box1"> <a href="javascript:void(0);" id="back-search-fields"
+                                class="button secondary"> Back</a> </div>
+                        <div class="neft-button-wrap">
+                            <a href="javascript:void(0);" class="button primary branch-searchBtn" id="neft-confirmBtn"
+                                style="pointer-events: none;">Confirm</a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </form>
+        <script>
+            // Get the modal
+            var modal = document.getElementById("myModal");
+
+            // Get the button that opens the modal
+            var btn = document.getElementById("myBtn");
+
+            // Get the <span> element that closes the modal
+            var span = document.getElementById("close");
+
+            // When the user clicks on the button, open the modal
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+
+        <a href="#0" class="cd-top" style="display: none;"></a>
+        <footer class="login-footer">
+            <!--  <p>&copy; 2015 SBI Card  | <a onClick="setAnalyticsPost('Most Important Terms &amp; Conditions');" -->
+            <p>© <span id="year">2020</span> | <a onclick="setAnalyticsPost('Most Important Terms &amp; Conditions');"
+                    href="/en/most-important-terms-and-conditions.page" target="_blank">Most Important Terms &amp;
+                    Conditions</a> |
+                <a onclick="setAnalyticsPost('Privacy Policy');" href="/en/privacy-policy.page" target="_blank">Privacy
+                    Policy</a> |
+                <a onclick="setAnalyticsPost('Disclaimer');" href="/en/disclaimer.page" target="_blank">Disclaimer</a> |
+                <a onclick="setAnalyticsPost('');" href="/en/tnc.page" target="_blank">Terms &amp; Conditions</a> |
+                <a onclick="setAnalyticsPost('Offer Terms &amp; Conditions');" href="/en/offer-terms-conditions.page"
+                    target="_blank">Offer Terms &amp; Conditions</a>
+                <span class="foot_btmtxt">Site best viewed in browsers I.E 11+, Mozilla 3.5+, Chrome 3.0+, Safari 5.0+
+                    on all desktops, laptops, and Android &amp; iOS mobile/tablet devices. </span>
+            </p>
+        </footer>
+
+
+
+        <!--#include virtual="components/dashboard-footer.shtml" -->
+
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/gh/Dogfalo/materialize@master/extras/noUiSlider/nouislider.min.js"></script>
+    <script src="../js/custom-file-input.js"></script>
+
+    <script type="text/javascript">
+        window.onload = function () {
+
+            window.onscroll = function () {
+                //                                alert('hello');
+                // var scroll = window.scrollY;
+                // alert('heffffffffffllo');
+                var scroll = 10;
+                // if (scroll >= 10)
+                if (window.pageYOffset >= scroll) {
+                    // alert('hello');
+
+                    document.querySelector(".slideBack").classList.add("showSlide");
+                    document.querySelector(".scrollDown").classList.add("hideScrollText");
+                    document.querySelector(".slideCont .frontCard").classList.add("hideFront");
+                } else {
+                    document.querySelector(".slideBack").classList.remove("showSlide");
+                    document.querySelector(".scrollDown").classList.remove("hideScrollText");
+                    document.querySelector(".slideCont .frontCard").classList.remove("hideFront");
+                }
+            }
+        }
+    </script>
+    <script>
+
+        $(document).on("click", ".toggle", function () {
+            //alert("gggg");
+            $(this).next(".collapse-content").toggleClass("show");
+            $(this).find(".sub-heading").toggle();
+        });
+
+
+//var coll = document.getElementsByClassName("toggle");
+//var i;
+//
+//for (i = 0; i < coll.length; i++) {
+//  coll[i].addEventListener("click", function() {
+//    this.classList.toggle("active");
+//    var content = this.nextElementSibling;
+//    if (content.style.maxHeight){
+//      content.style.maxHeight = null;
+//    } else {
+//      content.style.maxHeight = content.scrollHeight + "px";
+//    } 
+//  });
+//}
+
+    </script>
+    <script>
+        $(document).ready(function () {
+
+
+            $('.otp-form').on('submit', function () {
+                $("#myModal").hide();
+                $(".multicard-process").hide();
+                $("#genrate-e-msz").show();
+                $('html, body').animate({
+                    scrollTop: (target.offset().top - 110)
+                });
+                return false;
+            });
+
+
+
+            $(".line-btn").click(function () {
+                $(this).hide();
+                $(this).next(".hidden-points").show();
+                $(this).nextAll(".line-btn-less").show();
+            });
+
+
+            $(".line-btn-less").click(function () {
+                $(this).hide();
+                $(this).prev(".hidden-points").hide();
+                $(this).prevAll(".line-btn").show();
+            });
+
+            $(".show-cre-limit-msz").click(function () {
+                $(".credit-limit-view-step").hide();
+                $(".cre-limit-message-hidden").show();
+            });
+
+
+            $("#change-credit-limit").click(function () {
+                $(this).hide();
+                $("#limit-change").show();
+            });
+
+
+            $("#edit-address").click(function () {
+                $(this).hide();
+                $("#address-view").hide();
+                $("#change-address").show();
+            });
+
+
+            $("#cancle-edit-add").click(function () {
+                $("#edit-address").show();
+                $("#address-view").show();
+                $("#change-address").hide();
+            });
+
+
+            $(".addmore").click(function () {
+                $(this).hide();
+                $("#uplod-2").show();
+            });
+
+
+            $("#multicard-process-show").click(function () {
+                $(".multicard-process").hide();
+                $("#genrate-e-msz").show();
+                $("#myModal").hide();
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.substr(1) + ']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: (target.offset().top - 130)
+                    });
+                    return false;
+                }
+            });
+
+            $("#genrate-e-card-screen").click(function () {
+                $("#genrate-e-msz").hide();
+                $("#hide-on-e-card").hide();
+
+                $("#genrate-e-card-view").show();
+
+            });
+
+
+            $(".step2").click(function () {
+                $(this).parents(".main-wrap.my-profile").removeClass("active");
+                $(this).parents(".main-wrap.my-profile").addClass("filled");
+                $(this).parents(".main-wrap.my-profile").find(".mumer-heading").addClass("toggle");
+                $(this).parents(".main-wrap.my-profile").siblings("#step2").addClass("active");
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.substr(1) + ']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: (target.offset().top - 110)
+                    });
+                    return false;
+                }
+            });
+            $(".step-2").click(function () {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.substr(1) + ']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: (target.offset().top - 110)
+                    });
+                    return false;
+                }
+            });
+            $(".step3").click(function () {
+                $(this).parents(".main-wrap.my-profile").removeClass("active");
+                $(this).parents(".main-wrap.my-profile").addClass("filled");
+                $(this).parents(".main-wrap.my-profile").find(".mumer-heading").addClass("toggle");
+                $(this).parents(".main-wrap.my-profile").siblings("#step3").addClass("active");
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.substr(1) + ']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: (target.offset().top - 110)
+                    });
+                    return false;
+                }
+            });
+            $(".step4").click(function () {
+                $(this).parents(".main-wrap.my-profile").removeClass("active");
+                $(this).parents(".main-wrap.my-profile").addClass("filled");
+                $(this).parents(".main-wrap.my-profile").find(".mumer-heading").addClass("toggle");
+                $(this).parents(".main-wrap.my-profile").siblings("#step4").addClass("active");
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.substr(1) + ']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: (target.offset().top - 110)
+                    });
+                    return false;
+                }
+            });
+            $(".step5").click(function () {
+                $(this).parents(".main-wrap.my-profile").removeClass("active");
+                $(this).parents(".main-wrap.my-profile").addClass("filled");
+                $(this).parents(".main-wrap.my-profile").find(".mumer-heading").addClass("toggle");
+                $(this).parents(".main-wrap.my-profile").siblings("#step5").addClass("active");
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.substr(1) + ']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: (target.offset().top - 110)
+                    });
+                    return false;
+                }
+            });
+            $(".step6").click(function () {
+                $(this).parents(".main-wrap.my-profile").removeClass("active");
+                $(this).parents(".main-wrap.my-profile").addClass("filled");
+                $(this).parents(".main-wrap.my-profile").find(".mumer-heading").addClass("toggle");
+                $(this).parents(".main-wrap.my-profile").siblings("#step6").addClass("active");
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.substr(1) + ']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: (target.offset().top - 110)
+                    });
+                    return false;
+                }
+            });
+
+            $(".current-outstanding").click(function () {
+                $(this).hide();
+                $(".step-view-btn.hide").show();
+            });
+
+            $('#check_1').click(function () {
+                $('.kyc-ren-home').addClass('radio-checked-1');
+                $('.kyc-ren-home').removeClass('radio-checked-2');
+                $('.kyc-ren-home').removeClass('radio-checked-3');
+                $('.p-card').show();
+                $('.addon-card').hide();
+            });
+
+            $('#check_2').click(function () {
+                $('.kyc-ren-home').removeClass('radio-checked-1');
+                $('.kyc-ren-home').addClass('radio-checked-2');
+                $('.kyc-ren-home').removeClass('radio-checked-3');
+                $('.p-card').hide();
+                $('.addon-card').show();
+            });
+
+            $('#check_3').click(function () {
+                $('.kyc-ren-home').removeClass('radio-checked-1');
+                $('.kyc-ren-home').removeClass('radio-checked-2');
+                $('.kyc-ren-home').addClass('radio-checked-3');
+                $('.p-card').hide();
+                $('.addon-card').show();
+            });
+
+            // if ($('.file-upload-wrapper').attr('data-text') == 'banner.jpg"') {
+            //     $(this).addClass('jdjdjdj');
+            // } else {
+            // }
+            
+
+
+
+        });
+
+    </script>
+
+
+
+    <script>
+        localStorage.clear();
+        let max_limit = 300000;
+        let timeout_limit = 5000;
+
+        //================================Slider 1==========================================
+        let slider_min1 = 40000;
+        let slider_max1 = 190000;
+        let completed1 = 70000;
+        let start1 = 150000;
+        document.addEventListener("DOMContentLoaded", function (event) {
+            var slider = document.getElementById('slider');
+            noUiSlider.create(slider, {
+                animationDuration: 300,
+                start: [completed1, start1],
+                connect: true,
+                step: 1,
+                range: {
+                    'min': slider_min1,
+                    'max': slider_max1
+                },
+                format: wNumb({
+                    decimals: 0,
+                    encoder: function (a) {
+                        return Math.round(a * 100) / 100;
+                    }
+                })
+            });
+
+            /* begin Value  */
+            localStorage.setItem('lastValue', start1);
+            var elementInput = document.querySelector(".slider-range-value");
+            var elementText = document.querySelector(".slider-range-text");
+
+            slider.noUiSlider.on("update", function (values, handle) {
+                elementInput.value = parseInt(values[handle]);
+                elementText.innerText = parseInt(values[handle]);
+                calculate_total();
+            });
+
+            elementInput.addEventListener('change', function () {
+                var amount = parseInt([this.value]);
+
+                var totals = get_totals();
+
+                var Value1 = parseInt(totals.sliderValue1);
+                var Value2 = parseInt(totals.sliderValue2);
+                var Value3 = parseInt(totals.sliderValue3);
+
+                if (amount == '' || amount == 'undefined' || isNaN(amount) || amount < slider_min1) {
+                    elementInput.value = elementText.innerText;
+                } else if (amount + Value2 + Value3 > max_limit) {
+                    $('.price-alert-view1').fadeIn().delay(timeout_limit).fadeOut();
+                    var lastValue = elementText.innerText;
+                    slider.noUiSlider.set([completed1, lastValue]);
+                    elementInput.value = lastValue;
+                    elementText.innerText = lastValue;
+                } else {
+                    slider.noUiSlider.set([completed1, amount]);
+                    elementInput.value = amount;
+                    elementText.innerText = amount;
+                }
+                calculate_total();
+            });
+
+            slider.noUiSlider.on('change', function (values, handle) {
+
+                var amount = parseInt(values[handle]);
+
+                var totals = get_totals();
+
+                var Value1 = parseInt(totals.sliderValue1);
+                var Value2 = parseInt(totals.sliderValue2);
+                var Value3 = parseInt(totals.sliderValue3);
+
+                if (amount == '' || amount == 'undefined' || isNaN(amount)) {
+                    var lastValue = elementText.innerText;
+                    slider.noUiSlider.set([completed1, lastValue]);
+                } else if (amount + Value2 + Value3 > max_limit) {
+                    $('.price-alert-view1').fadeIn().delay(timeout_limit).fadeOut();
+                    var lastValue = max_limit - (Value2 + Value3);//localStorage.getItem('lastValue');
+                    slider.noUiSlider.set([completed1, lastValue]);
+                    elementInput.value = lastValue;
+                    elementText.innerText = lastValue;
+                } else {
+                    localStorage.setItem('lastValue', amount);
+                    slider.noUiSlider.set([completed1, amount]);
+                    elementInput.value = amount;
+                    elementText.innerText = amount;
+                }
+                calculate_total();
+            });
+
+        });
+
+
+        //================================Slider 2==========================================
+        let slider_min2 = 10000;
+        let slider_max2 = 220000;
+        let start2 = 120000;
+        document.addEventListener("DOMContentLoaded", function (event) {
+            var slider1 = document.getElementById('slider1');
+            noUiSlider.create(slider1, {
+                start: start2,
+                behaviour: 'tap',
+                //connect: true,
+                connect: 'lower',
+                //  connect: [true,false],
+                step: 1,
+                range: {
+                    'min': slider_min2,
+                    'max': slider_max2
+                },
+                format: wNumb({
+                    decimals: 0,
+                    encoder: function (a) {
+                        return Math.round(a * 100) / 100;
+                    }
+                })
+            });
+
+            /* begin Value  */
+            localStorage.setItem('lastValue1', start2);
+            var elementInput = document.querySelector(".slider-range-value1");
+            var elementText = document.querySelector(".slider-range-text1");
+
+            slider1.noUiSlider.on("update", function (values, handle) {
+                elementInput.value = parseInt(values[handle]);
+                elementText.innerText = parseInt(values[handle]);
+                calculate_total();
+                var totals = get_totals();
+            });
+
+            elementInput.addEventListener('change', function () {
+                var amount = parseInt([this.value]);
+
+                var totals = get_totals();
+
+                var Value1 = parseInt(totals.sliderValue1);
+                var Value2 = parseInt(totals.sliderValue2);
+                var Value3 = parseInt(totals.sliderValue3);
+
+                if (amount == '' || amount == 'undefined' || isNaN(amount) || amount < slider_min2) {
+                    elementInput.value = elementText.innerText;
+                } else if (amount + Value1 + Value3 > max_limit) {
+                    $('.price-alert-view2').fadeIn().delay(timeout_limit).fadeOut();
+                    var lastValue = elementText.innerText;
+                    slider1.noUiSlider.set(lastValue);
+                    elementInput.value = lastValue;
+                    elementText.innerText = lastValue;
+                } else {
+                    slider1.noUiSlider.set(amount);
+                    elementInput.value = amount;
+                    elementText.innerText = amount;
+                }
+                calculate_total();
+            });
+
+            slider1.noUiSlider.on('change', function (values, handle) {
+                var amount = parseInt(values[handle]);
+
+                var totals = get_totals();
+
+                var Value1 = parseInt(totals.sliderValue1);
+                var Value2 = parseInt(totals.sliderValue2);
+                var Value3 = parseInt(totals.sliderValue3);
+
+                if (amount == '' || amount == 'undefined' || isNaN(amount)) {
+                    var lastValue = elementText.innerText;
+                    slider1.noUiSlider.set(lastValue);
+                } else if (amount + Value1 + Value3 > max_limit) {
+                    $('.price-alert-view2').fadeIn().delay(timeout_limit).fadeOut();
+                    var lastValue = max_limit - (Value1 + Value3);//localStorage.getItem('lastValue1');
+                    slider1.noUiSlider.set(lastValue);
+                    elementInput.value = lastValue;
+                    elementText.innerText = lastValue;
+                } else {
+                    localStorage.setItem('lastValue1', amount);
+                    slider1.noUiSlider.set(amount);
+                    elementInput.value = amount;
+                    elementText.innerText = amount;
+                }
+                calculate_total();
+            });
+
+        });
+
+        //================================Slider 3==========================================
+        let slider_min3 = 10000;
+        let slider_max3 = 130000;
+        let start3 = 30000;
+        document.addEventListener("DOMContentLoaded", function (event) {
+            var slider2 = document.getElementById('slider2');
+            noUiSlider.create(slider2, {
+                start: start3,
+                behaviour: 'tap',
+                //connect: true,
+                connect: 'lower',
+                //  connect: [true,false],
+                step: 1,
+                //tooltips: [ wNumb({ decimals: 0 }), wNumb({ decimals: 0 }) ],
+                range: {
+                    'min': slider_min3,
+                    'max': slider_max3
+                },
+                format: wNumb({
+                    decimals: 0,
+                    encoder: function (a) {
+                        return Math.round(a * 100) / 100;
+                    }
+                })
+            });
+
+            /* begin Value  */
+            localStorage.setItem('lastValue2', start3);
+
+            var elementInput = document.querySelector(".slider-range-value2");
+            var elementText = document.querySelector(".slider-range-text2");
+
+            slider2.noUiSlider.on("update", function (values, handle) {
+                elementInput.value = parseInt(values[handle]);
+                elementText.innerText = parseInt(values[handle]);
+                calculate_total();
+            });
+
+
+
+            elementInput.addEventListener('change', function () {
+                var amount = parseInt([this.value]);
+
+                var totals = get_totals();
+
+                var Value1 = parseInt(totals.sliderValue1);
+                var Value2 = parseInt(totals.sliderValue2);
+                var Value3 = parseInt(totals.sliderValue3);
+
+                if (amount == '' || amount == 'undefined' || isNaN(amount) || amount < slider_min3) {
+                    elementInput.value = elementText.innerText;
+                } else if (amount + Value1 + Value2 > max_limit) {
+                    $('.price-alert-view3').fadeIn().delay(timeout_limit).fadeOut();
+                    var lastValue = elementText.innerText;
+                    slider2.noUiSlider.set(lastValue);
+                    elementInput.value = lastValue;
+                    elementText.innerText = lastValue;
+                } else {
+                    slider2.noUiSlider.set(amount);
+                    elementInput.value = amount;
+                    elementText.innerText = amount;
+                }
+                calculate_total();
+            });
+
+            slider2.noUiSlider.on('change', function (values, handle) {
+                var amount = parseInt(values[handle]);
+
+                var totals = get_totals();
+
+                var Value1 = parseInt(totals.sliderValue1);
+                var Value2 = parseInt(totals.sliderValue2);
+                var Value3 = parseInt(totals.sliderValue3);
+                console.log(amount + Value1 + Value2);
+                if (amount == '' || amount == 'undefined' || isNaN(amount)) {
+                    var lastValue = elementText.innerText;
+                    slider2.noUiSlider.set(lastValue);
+                } else if (amount + Value1 + Value2 > max_limit) {
+                    $('.price-alert-view3').fadeIn().delay(timeout_limit).fadeOut();
+                    var lastValue = max_limit - (Value1 + Value2);//localStorage.getItem('lastValue2');
+                    slider2.noUiSlider.set(lastValue);
+                    elementInput.value = lastValue;
+                    elementText.innerText = lastValue;
+                } else {
+                    localStorage.setItem('lastValue2', amount);
+                    slider2.noUiSlider.set(amount);
+                    elementInput.value = amount;
+                    elementText.innerText = amount;
+                }
+                calculate_total();
+            });
+
+        });
+
+        document.addEventListener("DOMContentLoaded", function (event) {
+            calculate_total();
+        });
+
+        "use strict";
+        var calculate_total = function () {
+            var sliderValue1 = parseInt(document.querySelector(".slider-valu").value);
+            var sliderValue2 = parseInt(document.querySelector(".slider-valu1").value);
+            var sliderValue3 = parseInt(document.querySelector(".slider-valu2").value);
+            var finalValue = document.getElementById("green");
+            var sum = sliderValue1 + sliderValue2 + sliderValue3;
+            finalValue.innerText = sum;
+            if (sum < max_limit) {
+                $('.credit-limit-confirm-btn').addClass('disabled');
+                $('.sum').removeClass('green').addClass('red-color');
+                $('#rem_amount').text(max_limit - sum);
+                $('.price-alert-msz-success').fadeOut();
+                $('.price-alert-msz-err').fadeIn();
+            } else {
+                $('.credit-limit-confirm-btn').removeClass('disabled');
+                $('.sum').removeClass('red-color').addClass('green');
+                $('.price-alert-msz-err').fadeOut();
+                $('.price-alert-msz-success').fadeIn();
+            }
+        }
+
+        "use strict";
+        var get_totals = function () {
+            var sliderValue1 = parseInt(document.querySelector(".slider-valu").value);
+            var sliderValue2 = parseInt(document.querySelector(".slider-valu1").value);
+            var sliderValue3 = parseInt(document.querySelector(".slider-valu2").value);
+            var finalValue = document.getElementById("green");
+
+            var totals = new Object();
+            totals['sliderValue1'] = sliderValue1;
+            totals['sliderValue2'] = sliderValue2;
+            totals['sliderValue3'] = sliderValue3;
+            totals['finalValue'] = finalValue.innerText;
+            return totals;
+        }
+
+
+
+    </script>
+
+
+
+
+
+
+    <script>
+        //            =========Custom Select box ===============================
+        var x, i, j, l, ll, selElmnt, a, b, c;
+        /* Look for any elements with the class "custom-select": */
+        x = document.getElementsByClassName("custom-select");
+        l = x.length;
+        for (i = 0; i < l; i++) {
+            selElmnt = x[i].getElementsByTagName("select")[0];
+            ll = selElmnt.length;
+            /* For each element, create a new DIV that will act as the selected item: */
+            a = document.createElement("DIV");
+            a.setAttribute("class", "select-selected");
+            a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+            x[i].appendChild(a);
+            /* For each element, create a new DIV that will contain the option list: */
+            b = document.createElement("DIV");
+            b.setAttribute("class", "select-items select-hide");
+            for (j = 1; j < ll; j++) {
+                /* For each option in the original select element,
+                 create a new DIV that will act as an option item: */
+                c = document.createElement("DIV");
+                c.innerHTML = selElmnt.options[j].innerHTML;
+                c.addEventListener("click", function (e) {
+                    /* When an item is clicked, update the original select box,
+                     and the selected item: */
+                    var y, i, k, s, h, sl, yl;
+                    s = this.parentNode.parentNode.getElementsByTagName("select")[0];
+                    sl = s.length;
+                    h = this.parentNode.previousSibling;
+                    for (i = 0; i < sl; i++) {
+                        if (s.options[i].innerHTML == this.innerHTML) {
+                            s.selectedIndex = i;
+                            h.innerHTML = this.innerHTML;
+                            y = this.parentNode.getElementsByClassName("same-as-selected");
+                            yl = y.length;
+                            for (k = 0; k < yl; k++) {
+                                y[k].removeAttribute("class");
+                            }
+                            this.setAttribute("class", "same-as-selected");
+                            break;
+                        }
+                    }
+                    h.click();
+                });
+                b.appendChild(c);
+            }
+            x[i].appendChild(b);
+            a.addEventListener("click", function (e) {
+                /* When the select box is clicked, close any other select boxes,
+                 and open/close the current select box: */
+                e.stopPropagation();
+                closeAllSelect(this);
+                this.nextSibling.classList.toggle("select-hide");
+                this.classList.toggle("select-arrow-active");
+            });
+        }
+
+        function closeAllSelect(elmnt) {
+            /* A function that will close all select boxes in the document,
+             except the current select box: */
+            var x, y, i, xl, yl, arrNo = [];
+            x = document.getElementsByClassName("select-items");
+            y = document.getElementsByClassName("select-selected");
+            xl = x.length;
+            yl = y.length;
+            for (i = 0; i < yl; i++) {
+                if (elmnt == y[i]) {
+                    arrNo.push(i)
+                } else {
+                    y[i].classList.remove("select-arrow-active");
+                }
+            }
+            for (i = 0; i < xl; i++) {
+                if (arrNo.indexOf(i)) {
+                    x[i].classList.add("select-hide");
+                }
+            }
+        }
+
+        /* If the user clicks anywhere outside the select box,
+         then close all select boxes: */
+        document.addEventListener("click", closeAllSelect);
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('#terms_conditions').click(function () {
+                $('.e-sign-button').toggleClass('gray-btn');
+                $('.e-sign-button').toggleClass('tick-active');
+            });
+
+            $('#state_ban_details_button_1').click(function () {
+                $('.state-bank-details-yes-block').show();
+                $('.state-bank-details-no-block').hide();
+            });
+
+            $('#state_ban_details_2').click(function () {
+                $('.state-bank-details-yes-block').hide();
+                $('.state-bank-details-no-block').show();
+            });
+
+            $('.custom-selct-show').click(function () {
+                $('.custom-selct-list-block').slideToggle();
+                $(this).toggleClass('custom-selct-show-active');
+            });
+
+            $('.close-link').click(function () {
+                $('.custom-selct-list-block').slideToggle();
+                $(this).toggleClass('custom-selct-show-active');
+            });
+
+            $('.custom-selct-list').click(function () {
+                $('#readout').val($(this).data('holding'));
+            });
+
+            $('.ifsc-link-block').click(function () {
+                $('.neft-ifse-popup').addClass('open');
+                $('html').addClass('modal-open');
+            });
+
+            $('.close-neft-popup').click(function () {
+                $('.neft-ifse-popup').removeClass('open');
+                $('html').removeClass('modal-open');
+            });
+
+            $('.main-wrap').click(function () {
+                $(this).removeClass('filled');
+            });
+
+            $('#step_title_1').click(function () {
+                $('.step-1-btn').hide();
+            });
+
+            $('#step_title_2').click(function () {
+                $('.step-2-btn').hide();
+            });
+
+            $('.name-in-bank-link').click(function () {
+                $('.name-in-bank').toggle();
+                $('.name-in-bank').toggleClass('name-in-bank-extra');
+            });
+
+            $('.user-menu').click(function () {
+                $('.dropdown-block').toggle();
+            });
+
+            $('.vpa').click(function () {
+                $('.vpa-block').show();
+                $('.voa-block').hide();
+            });
+
+            $('.voa').click(function () {
+                $('.vpa-block').hide();
+                $('.voa-block').show();
+            });
+
+            $('.radio-wrap-lg').click(function () {
+                $('.radio-wrap-lg').removeClass('active');
+                $(this).addClass('active');
+            });
+
+            $(".form-upload").on("change", ".file-upload-field", function () {
+                $(this).parent(".file-upload-wrapper").attr("data-text", $(this).val().replace(/.*(\/|\\)/, ''));
+            });
+
+        });
+
+        function viewEdit() {
+            $('.view-edit').show();
+            $('.view-edit-details').hide();
+        }
+
+        function cmnSubmit() {
+            $('.update-lable-contact-block').show();
+            $('.card-note-holder').show();
+            $('.view-edit').hide();
+            $('.unmasked').show();
+            $('.masked').hide();
+        }
+
+        function updateEmail() {
+            $('.email-block span').hide();
+            $('.email-block input').show();
+            $('.emai-cncl-submit').show();
+            $('.update-email').hide();
+            $('.update-phone-number').hide();
+        }
+
+        function emailUpdateSubmit() {
+            $('.email-submit-otp-block').show();
+            $('.form-btn-block').hide();
+            $('.email-block .unmasked').show();
+            $('.email-block input').hide();
+        }
+
+
+        function updatePhoneNumber() {
+            $('.phone-number-block span').hide();
+            $('.phone-number-block input').show();
+            $('.phone-cncl-submit').show();
+            $('.update-email').hide();
+            $('.update-phone-number').hide();
+        }
+
+        function phoneUpdateSubmit() {
+            $('.phone-submit-otp-block').show();
+            $('.form-btn-block').hide();
+            $('.phone-number-block .unmasked').show();
+            $('.phone-number-block input').hide();
+        }
+
+        function cancelUpdate() {
+            $('.update-email').show();
+            $('.update-phone-number').show();
+            $('.form-btn-block').hide();
+            $('.lable-contact-block .unmasked').show();
+            $('.lable-contact-block .masked').hide();
+            $('.lable-contact-block input').hide();
+            $('.unmasked').hide();
+            $('.masked').show();
+        }
+
+        function viewEditInput() {
+            $('#v_e_submit').removeClass('gray-btn pointer-events-none');
+        }
+
+        function viewEditInput2() {
+            $('#v_e_submit_2').removeClass('gray-btn pointer-events-none');
+        }
+
+        function viewEditInput3() {
+            $('#v_e_submit_3').removeClass('gray-btn pointer-events-none');
+        }
+    </script>
+
+    <!--[if IE 8]>
+            <script type="text/javascript" src="/creditcards/resources/concat-js/ie.all.js"></script>
+        <![endif]-->
+    <script type="text/javascript" src="/creditcards/resources/min-js/custom.min.js?rel=88c95f7024"></script>
+
+<script src="../js/main.js"></script>
+
+
+
+
+
+
+    <input type="hidden" id="deliveryChargeWithGST" data-delivery-charge-with-gst="116.82">
+
+    <!-- suspicious transaction  popup starts -->
+
+    <input type="hidden" id="fraudControlStatusFlagVal" value="false">
+    <input type="hidden" id="isAlertToBeDisplayedVal" value="true">
+
+
+
+    <!--#include virtual="components/common-footer.html" -->
+
+
+</html>

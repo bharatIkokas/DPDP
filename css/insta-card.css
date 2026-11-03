@@ -1,0 +1,466 @@
+
+/* For InstaCard css */
+.grid {
+    display: grid;
+    display: -ms-grid
+}
+
+.twoColGrid {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.flex {
+    display: flex;
+}
+
+.contentCenter {
+    justify-content: center;
+}
+.flexEnd{
+    justify-content: flex-end;
+}
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.fullWidth {
+    width: 100%;
+}
+
+.fontSixteen {
+    font-size: 16px;
+    color: #333333;
+    font-weight: bold;
+}
+
+.newCard {
+    font-size: 12px;
+    color: #333333;
+}
+
+.newCard h3 {
+    padding-bottom: 20px;
+    font-weight: bold;
+}
+
+.newCard h3,
+.newCard p {
+    margin-bottom: 0;margin: 0;
+}
+.newCard h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #222222;
+    margin-bottom: 0;
+}
+.days {
+    padding-bottom: 10px;
+}
+
+.clock img {
+    padding: 0px 5px;
+}
+
+.cardsMainCont {
+    margin: 30px 0px;
+}
+
+.cardsCont {
+    background-color: #f2f9fc;
+    padding: 24px 0px 58px 0px;
+}
+
+.newCard {
+    margin-top: 30px;
+}
+
+.benefitCont {
+    flex-basis: 45%;
+}
+
+.cardText {
+    font-size: 18px;
+    color: #333333;
+    margin: 0;
+    padding-bottom: 30px;
+    font-weight: bold;
+}
+
+.benefitsCard {
+    border-bottom: 1px solid #dddddd;
+    margin-bottom: 59px;
+    padding-bottom: 30px;
+}
+
+.benefitCont p {
+    font-size: 12px;
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 0;
+    padding: 16px 0px 10px 0px;
+}
+
+.benefitList li {
+    font-size: 12px;
+    color: #333333;
+    line-height: 1.42;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.benefitList li::before {
+    content: "";
+    position: absolute;
+    left: -16px;
+    width: 6px;
+    height: 6px;
+    background-color: #333333;
+    top: 6px;
+    border-radius: 50%;
+}
+
+.benefitList li:last-child {
+    padding-bottom: 0;
+}
+
+.benefitList {
+    margin-bottom: 0;
+    padding-left: 16px;
+}
+
+.benefitMain {
+    grid-gap: 65px;
+}
+
+.frontCard {
+    z-index: 99;
+    left: -11px;
+}
+
+.frontCardCont {
+    top: 0;
+    text-align: center;
+    height: 100%;
+}
+
+.cardBottom {
+    bottom: 30px;
+}
+
+.cardBottom h3 {
+    color: #ffffff;
+    margin-bottom: 0;
+    padding-bottom: 50px;
+    margin: 0;
+    font-size: 12px;
+    font-weight: lighter;
+}
+
+.chipsCont {
+    padding-top: 47px;
+}
+
+.cardsCont>.relative {
+    right: 5%;
+}
+
+.backCard {
+    left: calc(0px + 44.4%);
+    top: calc(0px + 37px);
+    width: 100%;
+}
+
+.backCardBottom {
+    bottom: 20px;
+    right: 20px;
+}
+
+.backNum {
+    margin-bottom: 20px;
+}
+
+.backTopCont {
+    top: 24px;
+    right: 26px;
+    color: white;
+}
+
+.numImg,
+.numImg img {
+    height: 100%
+}
+
+.numImg,
+.numImgNum,
+.expireDate span,
+.cvv span,
+.expDateText,
+.cvvText {
+    display: block;
+}
+
+.numImgNum {
+    padding-left: 10px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.numImgNum,
+.expireDate {
+    text-align: center;
+}
+
+.backNum,
+.expireDate,
+.backCardBottom,
+.cvv,
+.sbiCardImg {
+    text-align: right;
+}
+
+.numImgNum:nth-child(2) {
+    line-height: 0.9;
+}
+
+.numImgNum:last-child {
+    line-height: 1;
+}
+
+.expireDate {
+    margin-bottom: 20px;
+}
+
+.expireDate span:first-child,
+.cvv span:first-child {
+    padding-bottom: 5px;
+}
+
+.fontTen {
+    font-size: 10px;
+}
+
+.fontTwelve {
+    font-size: 12px;
+}
+
+.blackChip {
+    top: 8px;
+    left: 25px;
+}
+
+.horizCont{
+    right: 4% !important;
+}
+.horizBackCont{
+    left: calc(0px + 23%);
+    top: calc(0px + 44px);
+}
+.horizFront{
+    text-align: left;
+}
+.fontFourteen{
+    font-size: 14px;
+    color: #ffffff;
+}
+.Fonteighteen{
+    font-size: 18px;
+    color: #ffffff;
+}
+.expDateText{
+    color: #dddddd;
+}
+.expryDate{
+    font-size: 10px;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+.expDate {
+    font-size: 16px;
+    color: #ffffff;
+    margin:0;
+}
+.horizBack{
+    right: 20px;
+}
+.sbiCardImg{
+    padding: 26px 30px 0px 30px;
+}
+.chipCont{
+    padding-bottom: 20px;
+}
+.detailsCont{
+    padding: 0px 30px;
+}
+/*.cardNCont{
+    padding-bottom: 10px;
+}*/
+.cardNumbers,
+.name{
+    margin: 0;
+}
+.fontFourteen.name{
+    margin-top: 10px;
+}
+.cardNumbers span{
+    padding-right: 20px;
+}
+.expCont{
+    padding-bottom: 10px;
+}
+.cardNumbers span:last-child{
+    padding-right: 0;
+}
+.expDateText{
+    padding-bottom: 5px;
+}
+.cvvCont{
+    text-align: end;
+    padding: 0px 17px;
+}
+.cvvText{
+    padding: 0px 22px;
+    padding-top: 8px;
+}
+.cvvBtnCont{
+    height: 100%;
+    padding-top: 5px;
+}
+.cvvImg{
+    right: 51px;
+    top: -5px;
+}
+.cnnNumbers{
+    padding: 8px 17px;
+    background-color: white;
+}
+.noMarginLeft{
+    margin-left: 0;
+}
+.headerr{
+    text-align: center;
+    border-bottom: 1px solid #dddddd;
+    padding-top: 10px;
+}
+     .edge-specific{
+                display: none;
+            }
+            @supports (-ms-ime-align: auto) {
+                .edge-specific {
+                    color: red;
+                    display: block;
+                    background-color:#f2f9fc;
+                    font-weight: bold;
+                    text-align: center;
+                    padding-top: 20px;
+                }
+                .slideCont{
+                    position:relative;
+                    padding:70px 0px 58px 0px;
+                } 
+                .scrollDown{
+                    top:40px;
+                }
+            }
+@media screen and (max-width: 768px) {
+    .benefitsCard,
+    .newCard {
+        padding: 0px 40px 30px 40px;
+        margin-top: 30px;
+    }
+    .noMarginLeft{
+        padding-top: 0;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .benefitMain {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .benefitMain {
+        grid-gap: 34px;
+    }
+
+    .cardsCont > .relative {
+        right: 12%;
+        width: 80%;
+    }
+    .showSlide{
+        transform: translate(50px, 5.5px) !important;
+    }
+    .cardsCont > .relative img{
+        width:100%
+    }
+    .appStorrMain{
+        padding-right: 20px !important;
+    }
+    .downAppText{
+        width: 38%;
+        padding-right: 20px !important;
+    }
+    .appColMain{
+        justify-content: normal;
+    }
+}
+@media screen and (max-width: 320px) {
+    .backCard{
+        left: calc(0px + 34%);
+    }
+}
+
+/* For InstaCard css (End)*/
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .grid {
+        display: flex;flex-wrap: wrap;
+    }
+    .benefitCont{
+        display:inline-block;
+        margin-right:65px;
+        margin-bottom:0;
+        vertical-align:central;
+        width:42%;
+    }
+    .benefitCont:nth-child(2n){
+        margin-right:0
+        
+    }
+    .scrollDown{
+        width:40%;
+        text-align: center;
+    }
+ }
+ 
+/* ====================================================================*/
+button#registerbtn {
+    font-size: 14px;
+    background: #0095d9;
+        padding: 8px 18px !important;
+    color: #fff;
+    transition: .3s;
+    margin-bottom: 13px;
+    cursor: pointer;
+    font-weight: 700;
+    text-align: center;
+    border: none!important;
+    height: 38px;
+    outline: 0;
+}
+.benefitCont.new p {
+/*    font-size: 14px;*/
+    font-weight: bold; color: #333333;margin-bottom: 0;padding: 0px 0px 10px 0px;}
+.mb-0{margin-bottom: 0px;}
+.p-30 p{margin: 0;font-weight: 600;}
+.p-30 p a{text-decoration: none !important;  color: #0095d9;}
+.p-30{padding: 30px;}
+.alpha { padding-left: 15px;padding-top: 10px;}
+.benefitList .alpha li:before{display: none;}
+.align-items-center{    align-items: center;}
+.regular-font{font-weight: bold; color: #333333;  margin-bottom: 0;}
+ul.benefitList.not-bullet {padding-left: 1px;}
+ul.benefitList.not-bullet li:before{display: none;}
+@media (max-width: 767px){.mobile-text-left{text-align: left !important;}.mt-minus-15{margin-top: -15px;}}

@@ -1,0 +1,128 @@
+.inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.inputfile + label {
+        width: 100%;
+    font-size: 1.25rem;
+    /* 20px */
+    font-weight: 700;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+    display: inline-block;
+/*    overflow: hidden;*/
+    padding: 0.625rem 1.25rem;
+    /* 10px 20px */
+}
+
+/*.no-js .inputfile + label {
+    display: none;
+}*/
+
+.inputfile:focus + label,
+.inputfile.has-focus + label {
+    outline: 1px dotted #000;
+    outline: -webkit-focus-ring-color auto 5px;
+}
+
+.inputfile + label * {
+    /* pointer-events: none; */
+    /* in case of FastClick lib use */
+}
+
+.inputfile + label svg {
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+    fill: currentColor;
+    margin-top: -0.25em;
+    /* 4px */
+    margin-right: 0.25em;
+    /* 4px */
+}
+
+
+
+/* style 6 */
+
+.inputfile-6 + label {
+       color: #222;
+    font-size: 14px;
+}
+
+.inputfile-6 + label {
+       border: 1px solid #cdcbcb;
+    background-color:#fbfbfb;
+padding: 0px 0px;
+    box-sizing: border-box;
+    height: auto;
+    background: #fbfbfb;
+    width: 100%;
+}
+
+/*.inputfile-6:focus + label,
+.inputfile-6.has-focus + label,
+.inputfile-6 + label:hover {
+    border-color: #722040;
+}*/
+
+/*.inputfile-6 + label span,
+.inputfile-6 + label strong {
+    padding: 0.625rem 1.25rem;
+     10px 20px 
+}*/
+
+.inputfile-6 + label span {
+width: 100%;
+    display: inline-block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    vertical-align: top;
+    /* padding: 40px; */
+    height: 40px;
+    line-height: 40px;
+    padding-left: 9px;
+    font-weight: 600;
+    color: #666;
+}
+
+.inputfile-6 + label strong {
+background-color: #f3f2f2;
+    display: inline-block;
+    color: #666;
+
+    min-width: 80px;
+    text-align: center;
+    /* padding: 7px 5px; */
+        height: 40px !important;
+
+    line-height: 40px;
+    position: absolute;
+    right: 0px;
+    font-size: 13px;
+    font-weight: normal;
+    color: #222222;
+     border: solid 1px #dddddd;
+  background-image: linear-gradient(to right, rgba(203, 203, 203, 0.4) 16%, rgba(203, 203, 203, 0.5) 85%);
+}
+
+.inputfile-6:focus + label strong,
+.inputfile-6.has-focus + label strong,
+.inputfile-6 + label:hover strong {
+       background: #dddddd !important;
+/*    color: #FFF;*/
+}
+
+@media screen and (max-width: 50em) {
+	.inputfile-6 + label strong {
+		display: inline-block;
+	}
+       .form-control .inputfile-6 + label strong { height: 40px !important;}
+}

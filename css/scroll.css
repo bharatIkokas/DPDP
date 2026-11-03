@@ -1,0 +1,93 @@
+.slideBack > .backTopCont{
+	right: 0;
+}
+#frontCard{
+	display: flex;
+    align-items: flex-end;
+}
+#frontCard > div{
+	padding: 40px 20px;
+    width: 100%;
+}
+.slideBack{
+	top: 0px;
+	transform: translate(0px, 0px);
+	opacity: 0;
+}
+.showSlide{
+	transform: translate(90px, 5.5px);
+	opacity: 1;
+}
+.hideFront{
+	transform: translate(-12px, -30px);
+}
+.slideBack .cvvText{
+    padding-top: 12px;
+}
+.slideCont .frontCard{
+	left: 0;
+}
+.slideCont .relative{
+	right: 0;
+}
+.aapLink{
+	border-bottom: 1px solid #e8e8e8;
+	padding: 0px 14% 30px 30px;
+}
+.appStore{
+	padding-right: 20px;
+}
+.getOn > span{
+	color: #333333;
+    font-size: 10px;
+}
+.getOn > a{
+	color: #333333;
+    font-size: 14px;
+    font-weight: bold;
+    border-bottom: 1px solid;
+}
+.getOn > a:hover{
+	text-decoration: unset;
+}
+.getOn > span,
+.getOn > a{
+	display: block;
+}
+.downAppText{
+	width: 38%;
+}
+.appColMain{
+	width: 62%;
+    justify-content: flex-end;
+}
+.appStorrMain{
+	padding-right: 70px;
+}
+.appStorrMain:last-child{
+	padding-right: 0;
+}
+.downAppText > p{
+	margin-bottom: 0;
+	color: #333333;
+    font-size: 12px;
+}
+.slideCont{
+	position: relative;
+	padding: 100px 0px 58px 0px;
+}
+.slideCont .frontCard,
+.slideBack,.scrollDown{
+	transition: 0.8s;
+}
+.scrollDown{
+	position: absolute;
+    top: 50px;
+    margin-bottom: 0;
+    color: #969696;
+	font-size: 14px;
+}
+.hideScrollText{
+	transform: scale(0);
+}
+.height-30vh{min-height: 30vh}

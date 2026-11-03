@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="13" height="15.5" viewBox="0 0 13 15.5">
+    <defs>
+        <style>
+            .cls-1,.cls-2,.cls-3{fill:none;stroke:#666}.cls-2{stroke-linecap:round}.cls-2,.cls-3{fill-rule:evenodd}
+        </style>
+    </defs>
+    <g id="group-2" transform="translate(-.5)">
+        <g id="User-types-Account-Summary-Copy-4" transform="translate(1)">
+            <g id="Group-Copy">
+                <g id="Group-2-2" data-name="Group-2">
+                    <ellipse id="Oval" cx="6" cy="5.833" class="cls-1" rx="6" ry="5.833" transform="translate(0 3.333)"/>
+                    <path id="Path-4" d="M4 4.5v3.9a.1.1 0 0 0 .1.1h2.567" class="cls-2" transform="translate(1.333 1.324)"/>
+                    <path id="Path-3" d="M4.5 2.667V0" class="cls-3" transform="translate(1.5)"/>
+                    <path id="Path-3-2" d="M0 4V0" class="cls-2" data-name="Path-3" transform="matrix(0 -1 1 0 4 .667)"/>
+                    <path id="Path-5" d="M7 3.595L8.333 2.26" class="cls-2" transform="translate(2.333 .682)"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

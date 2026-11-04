@@ -1992,7 +1992,7 @@
             <!-- type=text + inputmode=numeric: avoids spinners, scroll-wheel changes
                  and stripped leading zeros that type=number causes.
                  Do NOT block paste (WCAG 3.3.8). Adjust maxlength to your OTP length. -->
-            <input type="text" id="otp-input" name="otp"
+            <input type="password" id="otp-input" name="otp"
                    inputmode="numeric" pattern="[0-9]*" maxlength="6"
                    autocomplete="one-time-code"
                    required aria-required="true"
@@ -2018,7 +2018,8 @@
   </section>
                     </section>
 
-                    <section class="main-wrap my-profile active pt-3 d-none" id="sucess_screen">
+                    <section class="main-wrap my-profile active pt-3 d-none" id="sucess_screen" data-screen-announcement
+    data-announcement="Congratulations! You have successfully submitted your request. Your Service Request Number is 123421432.">
                             <div>
                             <div class="card-view-holder message-seccess-view mt-sm-0 mt-0">
                                 <div class="list-container-selectbox flex-row align-item-center cong-message">
@@ -2030,7 +2031,23 @@
                             </div>
                         </section>
                 </section>
+<!-- Common screen reader announcement regions -->
 
+<div
+    id="screen-announcement"
+    class="sr-only"
+    role="status"
+    aria-live="polite"
+    aria-atomic="true">
+</div>
+
+<div
+    id="screen-error-announcement"
+    class="sr-only"
+    role="alert"
+    aria-live="assertive"
+    aria-atomic="true">
+</div>
             </div>
         </div>
 

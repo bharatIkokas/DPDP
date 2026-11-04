@@ -1836,7 +1836,10 @@
                     </div>
 
                 </div>
-                <section class="multicard-process accessbility-handled-wrap dpdp-joureny-wrap">
+                <section class="multicard-process accessbility-handled-wrap dpdp-joureny-wrap" id="error_screen" data-screen-announcement
+    data-announcement-priority="assertive"
+    data-announcement="Sorry ! Your request for is currently under verification. Log on sbicard.com or call the SBI Card helpline at
+39 02 02 02 to request for {0} after your address has been successfully verified.">
                     <section class="main-wrap my-profile active pt-3">
 
                             <div class="list-container-selectbox align-item-center alert-message wrong-message">
@@ -1848,7 +1851,23 @@
 
 </section>
                 </section>
+<!-- Common screen reader announcement regions -->
 
+<div
+    id="screen-announcement"
+    class="sr-only"
+    role="status"
+    aria-live="polite"
+    aria-atomic="true">
+</div>
+
+<div
+    id="screen-error-announcement"
+    class="sr-only"
+    role="alert"
+    aria-live="assertive"
+    aria-atomic="true">
+</div>
             </div>
         </div>
 

@@ -1,6 +1,4 @@
 ////////////////////////////Button active on Radio checked///////////////////////////////
-
-
 (function () {
     "use strict";
 
@@ -391,6 +389,134 @@ window.scrollTo({
 
     proceedButton.addEventListener("click", function () {
         consentBlock.classList.add("p-none");
+    });
+
+})();
+
+
+
+//////////////////// COMMON SCREEN READER ANNOUNCEMENT ////////////////////
+
+(function () {
+    "use strict";
+
+    var politeRegion = document.getElementById("screen-announcement");
+    var errorRegion = document.getElementById("screen-error-announcement");
+
+    if (!politeRegion || !errorRegion) {
+        return;
+    }
+
+    // Track screens already announced
+    var announcedScreens = new WeakSet();
+
+    function isScreenVisible(screen) {
+
+        var current = screen;
+
+        while (current && current !== document.documentElement) {
+
+            if (
+                current.hidden ||
+                current.getAttribute("aria-hidden") === "true" ||
+                current.classList.contains("d-none")
+            ) {
+                return false;
+            }
+
+            current = current.parentElement;
+        }
+
+        return true;
+    }
+
+    function announceScreen(screen) {
+
+        if (
+            !screen ||
+            announcedScreens.has(screen) ||
+            !isScreenVisible(screen)
+        ) {
+            return;
+        }
+
+        var message = screen.getAttribute("data-announcement");
+
+        // Fallback: use the screen heading and paragraph content
+        if (!message) {
+
+            var heading = screen.querySelector("h1, h2, h3");
+            var paragraphs = screen.querySelectorAll("p");
+
+            message = heading ? heading.textContent.trim() : "";
+
+            paragraphs.forEach(function (paragraph) {
+                message += " " + paragraph.textContent.trim();
+            });
+        }
+
+        message = message.replace(/\s+/g, " ").trim();
+
+        if (!message) {
+            return;
+        }
+
+        // Mark this screen as announced
+        announcedScreens.add(screen);
+
+        var isError =
+            screen.getAttribute("data-announcement-priority") === "assertive";
+
+        var liveRegion = isError ? errorRegion : politeRegion;
+        var otherRegion = isError ? politeRegion : errorRegion;
+
+        // Clear the previous announcement
+        liveRegion.textContent = "";
+        otherRegion.textContent = "";
+
+        // Announce after the screen becomes visible
+        window.setTimeout(function () {
+
+            liveRegion.textContent = message;
+
+        }, 100);
+    }
+
+    // Observe screen visibility changes
+    var observer = new MutationObserver(function (mutations) {
+
+        mutations.forEach(function (mutation) {
+
+            if (mutation.type !== "attributes") {
+                return;
+            }
+
+            var screen = mutation.target;
+
+            if (
+                screen.matches &&
+                screen.matches("[data-screen-announcement]")
+            ) {
+                announceScreen(screen);
+            }
+
+        });
+
+    });
+
+    // Observe all current and dynamically added screens
+    document.querySelectorAll("[data-screen-announcement]").forEach(function (screen) {
+
+        observer.observe(screen, {
+            attributes: true,
+            attributeFilter: ["class", "hidden", "aria-hidden"]
+        });
+
+        // Announce initially visible screens too
+        if (isScreenVisible(screen)) {
+            announceScreen(screen);
+        }
+
     });
 
 })();

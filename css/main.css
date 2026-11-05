@@ -4565,6 +4565,7 @@ button.ckyc-upload-link:focus-visible,
     justify-content: space-between;
     gap: 16px;
     min-height: 44px;
+    pointer-events: none;
 }
 
 .consent-switch-text {
@@ -4582,6 +4583,7 @@ button.ckyc-upload-link:focus-visible,
     height: 44px;
     align-items: center;
     justify-content: center;
+    pointer-events: auto;
 }
 
 .consent-switch-control input {
@@ -4686,8 +4688,10 @@ body.constant-pop-opened {overflow: hidden; height: 100vh;}
   .manage-constant-main-links-wrap {flex-wrap: wrap;}
   .manage-constant-main-links-wrap a {width: 100%; margin-bottom: 10px;} 
   .accessbility-handled-wrap .otp-block [type=password] {width: 100%;}
-  .accessbility-handled-wrap.otp-section-block .link-button {width: 100%; text-align: right; margin-top: 8px;}
-  .dpdp-joureny-wrap section.main-wrap.my-profile {min-height: 50vh;}
+  .dpdp-joureny-wrap {padding-bottom: 200px;}
+  .otp-section-block.manage-constant-otp .main-wrap {padding-left: 15px !important; padding-right: 15px !important;}
+  .accessbility-handled-wrap .otp-block [type=password] {width: 100% !important;}
+  .otp-resend-button-block {width: 100%;}
 }
 
 @media(min-width: 767px) {
